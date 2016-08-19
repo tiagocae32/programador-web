@@ -1,7 +1,7 @@
 # Programador Web Nivel 2
 Contenido del programa
  
-### Clase 1 Sintaxis y Variables / 
+### Clase 1 Sintaxis y Variables
 - JavaScript-Definición
 - Inclusión de JavaScript en nuestro archivo
 - Sintaxis
