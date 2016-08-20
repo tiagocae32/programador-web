@@ -1,7 +1,7 @@
 # Programador Web Nivel 2
 Contenido del programa
  
-### Clase 1 Sintaxis y Variables
+### [Clase 1 Sintaxis y Variables] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase1.md)
 - JavaScript-Definición
 - Inclusión de JavaScript en nuestro archivo
 - Sintaxis
