@@ -83,7 +83,7 @@ Contenido del programa
 - DOM Manipulation
 - Trabajo Práctico
 
-### Clase 15 jQuery Funciones 
+### [Clase 15 jQuery Funciones] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase15.md) 
 - Utilities y Programacion funcional
 - NO TIENE CONTENIDO
 
