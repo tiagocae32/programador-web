@@ -1,7 +1,7 @@
 # Programador Web Nivel 2
 Contenido del programa
  
-### [Clase 1 Sintaxis y Variables] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase1.md)
+### [Clase 1 Sintaxis y Variables] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase01.md)
 - JavaScript-Definición
 - Inclusión de JavaScript en nuestro archivo
 - Sintaxis
@@ -11,7 +11,7 @@ Contenido del programa
 - Operadores
 - Trabajo Práctico
 
-### [Clase 2 Estructuras de flujo] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase2.md)
+### [Clase 2 Estructuras de flujo] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase02.md)
 - Operadores
 - Estructuras de control de flujo
 - Sentencias break - Continue
@@ -101,17 +101,3 @@ Contenido del programa
 
 ### Clase 18 Proyecto Final
 - NO TIENE CONSIGNA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
