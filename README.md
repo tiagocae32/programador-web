@@ -72,7 +72,7 @@ Contenido del programa
 ### [Clase 11 jQuery] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase11.md)
 - Introduccion a jQuery
 
-### Clase 12 jQuery Selectores
+### [Clase 12 jQuery Selectores] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase12.md)
 - Selectores
 
 ### Clase 13 jQuery Efectos
