@@ -39,7 +39,7 @@ Contenido del programa
 - Variable THIS
 - Trabajo Práctico
 
-### Clase 6 Objetos
+### [Clase 6 Objetos] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase06.md)
 - Objetos
 - Polimorfismo
 - Prototyping
