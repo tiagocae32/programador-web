@@ -17,7 +17,7 @@ Contenido del programa
 - Sentencias break - Continue
 - Trabajo Práctico
 
-### Clase 3 Metodos de Strings y Arrays 
+### [Clase 3 Metodos de Strings y Arrays] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase03.md) 
 - Métodos String
 - Métodos Array
 - Trabajo Práctico
