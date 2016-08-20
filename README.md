@@ -63,7 +63,7 @@ Contenido del programa
 - Roles
 - Actividades
 
-### Clase 10 Workshop / SCRUM
+### [Clase 10 Workshop / SCRUM] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase10.md)
 - Fundamentos SCRUM
 - Documentos
 - Requisitos
