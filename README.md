@@ -78,7 +78,7 @@ Contenido del programa
 ### [Clase 13 jQuery Efectos] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase13.md)
 - Efectos
 
-### Clase 14 jQuery Eventos
+### [Clase 14 jQuery Eventos] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase14.md)
 - Eventos
 - DOM Manipulation
 - Trabajo Práctico
