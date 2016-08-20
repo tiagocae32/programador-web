@@ -69,7 +69,7 @@ Contenido del programa
 - Requisitos
 - Trabajo Práctico
 
-### Clase 11 jQuery
+### [Clase 11 jQuery] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase11.md)
 - Introduccion a jQuery
 
 ### Clase 12 jQuery Selectores
