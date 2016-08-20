@@ -87,7 +87,7 @@ Contenido del programa
 - Utilities y Programacion funcional
 - NO TIENE CONTENIDO
 
-### Clase 16 jQuery AJAX
+### [Clase 16 jQuery AJAX] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase16.md)
 - AJAX
 - XMLHttpRequest
 - $.ajax NO TIENE CONTENIDO
