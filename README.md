@@ -22,7 +22,7 @@ Contenido del programa
 - Métodos Array
 - Trabajo Práctico
 
-### Clase 4 Funciones
+### [Clase 4 Funciones] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase04.md)
 - Alcance de las variables
 - Valores de Retorno
 - Return
