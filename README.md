@@ -11,7 +11,7 @@ Contenido del programa
 - Operadores
 - Trabajo Práctico
 
-### Clase 2 Estructuras de flujo
+### [Clase 2 Estructuras de flujo] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase2.md)
 - Operadores
 - Estructuras de control de flujo
 - Sentencias break - Continue
