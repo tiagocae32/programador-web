@@ -29,7 +29,7 @@ Contenido del programa
 - Self Invoking
 - Trabajo Práctico
 
-### Clase 5 DOM y Eventos
+### [Clase 5 DOM y Eventos] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase05.md)
 - Árbol de nodos
 - Acceso a los nodos
 - Crear y eliminar nodos
