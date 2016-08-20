@@ -57,7 +57,7 @@ Contenido del programa
 - Mixin
 - Factory
 
-### Clase 9 Workshop / SCRUM
+### [Clase 9 Workshop / SCRUM] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase09.md)
 - SCRUM
 - Beneficios
 - Roles
