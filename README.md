@@ -47,7 +47,7 @@ Contenido del programa
 - Propiedades
 - Trabajo Práctico
 
-### Clase 7 Patron Modulo
+### [Clase 7 Patron Modulo] (https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase07.md)
 - Module Patterns
 
 ### Clase 8 Patrones / Patrones
