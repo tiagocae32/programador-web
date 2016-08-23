@@ -98,6 +98,33 @@ Contenido del programa
 
 ### Clase 17 Proyecto Final
 - NO TIENE CONSIGNA
+- Levantar un servidor local con Node y Express
+- Subirlo a Github
+- Conectarlo a Heroku y deployarlo
+- Dejar el CI habilitado y deployar automaticamente.
 
 ### Clase 18 Proyecto Final
 - NO TIENE CONSIGNA
+
+### Para el Nivel 3 (en comun)
+Es requisito:
+- Entender como funciona AJAX e API
+- Objetos y Patrones (Singleton y Module)
+- Levantar un servidor local con Node
+- Automatizar tareas con Grunt o Gulp
+- Manejo de CLI o linea de comandos
+
+### Para el Nivel 3 Experto Full Stack
+Es requisito:
+- Tener nociones de Base de datos
+
+### Para el Nivel 3 Experto Frontend
+Es requisito:
+- Tener nociones de Base de datos
+- HTML y CSS
+
+### Para el Nivel 3 Experto Mobil
+Es requisito:
+- HTML y CSS
+
+
