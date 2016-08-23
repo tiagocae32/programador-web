@@ -123,7 +123,7 @@ Es requisito:
 - Tener nociones de Base de datos
 - HTML y CSS
 
-### Para el Nivel 3 Experto Mobil
+### Para el Nivel 3 Experto Móvil
 Es requisito:
 - HTML y CSS
 
