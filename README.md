@@ -4,8 +4,8 @@ Contenido del programa
 
 ## [Clase 1 Sintaxis y Variables] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase01.md>)
 
-- JavaScript-Definición
-- Inclusión de JavaScript en nuestro archivo
+- Que es una Javascript?
+- Inclusión de Javascript en nuestro archivo
 - Sintaxis
 - Palabras reservadas
 - Variables
@@ -15,6 +15,7 @@ Contenido del programa
 
 ## [Clase 4 Funciones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase04.md>)
 
+- Que es una funcion?
 - Alcance de las variables
 - Valores de Retorno
 - Return
@@ -32,7 +33,7 @@ Contenido del programa
 
 - Operadores
 - Estructuras de control de flujo
-- Sentencias break - Continue
+- Sentencias break/continue
 - Trabajo Práctico
 
 ## [Clase 7 Objetos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase07.md>)
@@ -44,9 +45,9 @@ Contenido del programa
 
 ## [Clase 8 Patrones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase08.md>)
 
-- Patrones
-- Module Patterns
+- Patrones, que son, para que sirven
 - Singleton
+- Module Patterns
 
 ## [Clase 5 DOM] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase05.md>)
 
