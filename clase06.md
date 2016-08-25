@@ -2,30 +2,30 @@
 
 Un objeto es entidad existente en la memoria del ordenador que tiene unas propiedades (atributos o datos sobre sí mismo almacenados por el objeto) y unas operaciones disponibles específicas (métodos).
 
- En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
- 
- # Propiedades
+En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
+
+# Propiedades
 
 Las propiedadesson las características intrínsecas del objeto. Éstas, se representan a modo de variables, solo que técnicamente, pasan a denominarse propiedades:
 
 ```
-class Antena(): 
-    color = "" 
-    longitud = "" 
- 
-class Pelo(): 
-    color = "" 
-    textura = "" 
- 
-class Ojo(): 
-    forma = "" 
-    color = "" 
+class Antena():
+    color = ""
+    longitud = ""
+
+class Pelo():
+    color = ""
+    textura = ""
+
+class Ojo():
+    forma = ""
+    color = ""
     tamanio = ""
- 
-class Objeto(): 
-    color = "" 
-    tamanio = "" 
-    aspecto = "" 
+
+class Objeto():
+    color = ""
+    tamanio = ""
+    aspecto = ""
     antenas = Antena() # propiedad compuesta por el  objeto Antena
     ojos = Ojo()       # propiedad compuesta por el  objeto Ojo
     pelos = Pelo()     # propiedad compuesta por el  objeto Pelo
@@ -40,64 +40,120 @@ Algunos objetos comparten las mismas propiedades y métodos que otro objeto, y a
 Por ejemplo:
 
 ```
-class Antena(object): 
-    color = "" 
+class Antena(object):
+    color = ""
     longitud = ""
- 
-class Pelo(object): 
-    color = "" 
+
+class Pelo(object):
+    color = ""
     textura = ""
- 
-class Ojo(object): 
-    forma = "" 
-    color = "" 
+
+class Ojo(object):
+    forma = ""
+    color = ""
     tamanio = ""
- 
-class Objeto(object): 
-    color = "" 
-    tamanio = "" 
-    aspecto = "" 
-    antenas = Antena() 
-    ojos = Ojo() 
-    pelos = Pelo() 
- 
+
+class Objeto(object):
+    color = ""
+    tamanio = ""
+    aspecto = ""
+    antenas = Antena()
+    ojos = Ojo()
+    pelos = Pelo()
+
     def flotar(self):
         pass
- 
-class Dedo(object): 
-    longitud = "" 
-    forma = "" 
+
+class Dedo(object):
+    longitud = ""
+    forma = ""
     color = ""
- 
-class Pie(object): 
-    forma = "" 
-    color = "" 
-    dedos = Dedo() 
- 
+
+class Pie(object):
+    forma = ""
+    color = ""
+    dedos = Dedo()
 ```
 
 NuevoObjeto sí hereda de otra clase: Objeto
 
 ```
-class NuevoObjeto(Objeto): 
-    pie = Pie() 
- 
-    def saltar(self): 
-        pass
+class NuevoObjeto(Objeto):
+    pie = Pie()
 
+    def saltar(self):
+        pass
 ```
 
+--------------------------------------------------------------------------------
 
------
+# Patrón Módulo en JavaScript (Module Pattern)
 
+Los módulos son muy importantes ya que nos permiten mantener nuestro código encapsulado, sin contaminar el scope global y evitar colisión de nombres. Además nos ayudan a mantener en el proyecto unidades de código separadas y organizadas.
+
+El Module Pattern es considerado un Patrón de Diseño y en JavaScript nos ofrece la posibilidad de simular propiedades y métodos privados. Las variables y funciones en JavaScript no tienen modificadores de acceso, pero a través de los closures podemos simular este comportamiento.
+
+El Module Pattern se implementa creando una función anónima que se auto-invoca y regresa un objeto literal.
+
+```
+var myModule = (function () {
+  var counter = 0;
+
+  return {
+    incrementCounter: function () {
+      return counter++;
+    },
+
+    resetCounter: function () {
+      console.log('Valor de counter antes de reset: ' + counter);
+      counter = 0;
+    }
+  }
+})();
+
+// Uso:
+myModule.incrementCounter();
+myModule.incrementCounter();
+myModule.resetCounter(); // Imprime 2
+```
+
+De esta forma al tener una función anónima creamos un scope dentro de la función, evitando así contaminar el ámbito global. Regresamos un objeto literal que contiene dos métodos, ambos métodos pueden acceder a la variable counter ya que se ha creado un closure. Así podemos simular propiedades privadas.
+
+Entonces básicamente el Module Pattern se define de la siguiente forma.
+
+```
+var myModule = (function () {
+  var privateProperty = 10;
+
+  var privateMethodOne = function () {
+    // Algo
+  };
+
+  var privateMethodTwo = function () {
+    // Algo
+  };
+
+  return {
+    publicProperty: "foo",
+    publicMethodOne: function () {
+      //...
+    },
+    publicMethodTwo: function () {
+      // Invocar método privado
+      privateMethodOne();
+    },
+    publicMethodThree: privateMethodTwo //Alias de privateMethodTwo
+  }
+})();
+```
 
 ## Tipos de Herencia:
 
 Existen dos tipos de herencia
 
-* **Herencia Simple:** En esta jerarquía cada clase tiene como máximo una sola superclase. La herencia simple permite que una clase herede las propiedades y métodos de su superclase en una cadena jerárquica.
+- **Herencia Simple:** En esta jerarquía cada clase tiene como máximo una sola superclase. La herencia simple permite que una clase herede las propiedades y métodos de su superclase en una cadena jerárquica.
 
-* **Herencia múltiple:** Una malla o retícula consta de clases, cada una de las cuales pueden tener dos o más superclases inmediatas. Una herencia múltiple es aquella en la que cada clase puede heredar las propiedades y métodos de cualquier número de clases.
+- **Herencia múltiple:** Una malla o retícula consta de clases, cada una de las cuales pueden tener dos o más superclases inmediatas. Una herencia múltiple es aquella en la que cada clase puede heredar las propiedades y métodos de cualquier número de clases.
 
 # Polimorfismo
 
@@ -105,13 +161,11 @@ La palabra polimorfismo significa que un objeto posee varias formas diferentes. 
 
 En general, hay tres tipos de polimorfismo:
 
-* Polimorfismo de sobrecarga
-* Polimorfismo paramétrico (también llamado polimorfismo de plantillas)
-* Polimorfismo de inclusión (también llamado redefinición o subtipado)
+- Polimorfismo de sobrecarga
+- Polimorfismo paramétrico (también llamado polimorfismo de plantillas)
+- Polimorfismo de inclusión (también llamado redefinición o subtipado)
 
-
-
------
+--------------------------------------------------------------------------------
 
 ## Polimorfismo de sobrecarga
 
@@ -119,7 +173,7 @@ El polimorfismo de sobrecarga ocurre cuando las funciones del mismo nombre exist
 
 Por lo tanto, el polimorfismo de sobrecarga nos permite definir operadores cuyos comportamientos varían de acuerdo a los parámetros que se les aplican. Así es posible, por ejemplo, agregar el operador + y hacer que se comporte de manera distinta cuando está haciendo referencia a una operación entre dos números enteros (suma) o bien cuando se encuentra entre dos cadenas de caracteres (concatenación).
 
------
+--------------------------------------------------------------------------------
 
 ## Polimorfismo paramétrico
 
@@ -127,19 +181,19 @@ El polimorfismo paramétrico es la capacidad para definir varias funciones utili
 
 Por lo tanto, podemos por ejemplo, definir varios métodos homónimos de addition() efectuando una suma de valores.
 
-* El método int addition(int,int) devolvería la suma de dos números enteros.
-* float addition(float, float) devolvería la suma de dos flotantes.
-* char addition(char, char) daría por resultado la suma de dos caracteres definidos por el autor.
+- El método int addition(int,int) devolvería la suma de dos números enteros.
+- float addition(float, float) devolvería la suma de dos flotantes.
+- char addition(char, char) daría por resultado la suma de dos caracteres definidos por el autor.
 
 Una signature es el nombre y tipo (estático) que se da a los argumentos de una función. Por esto, una firma de método determina qué elemento se va a llamar.
 
------
+--------------------------------------------------------------------------------
 
 ## Polimorfismo de inclusión
 
 La habilidad para redefinir un método en clases que se hereda de una clase base se llama especialización. Por lo tanto, se puede llamar un método de objeto sin tener que conocer su tipo intrínseco: esto es polimorfismo de subtipado. Permite no tomar en cuenta detalles de las clases especializadas de una familia de objetos, enmascarándolos con una interfaz común (siendo esta la clase básica).
 
-Imagine un juego de ajedrez con los objetos rey, reina, alfil, caballo, torre y peón, cada uno heredando el objeto pieza. 
+Imagine un juego de ajedrez con los objetos rey, reina, alfil, caballo, torre y peón, cada uno heredando el objeto pieza.
 
 El método movimiento podría, usando polimorfismo de subtipado, hacer el movimiento correspondiente de acuerdo a la clase objeto que se llama. Esto permite al programa realizar el movimiento.de_pieza sin tener que verse conectado con cada tipo de pieza en particular.
 
