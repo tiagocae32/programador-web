@@ -13,6 +13,13 @@ Contenido del programa
 - Operadores
 - Trabajo Práctico
 
+## [Clase 2 Operadores] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase02.md>)
+
+- Condicionales
+- Ciclos e iteraciones
+- Sentencias break/continue
+- Trabajo Práctico
+
 ## [Clase 4 Funciones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase04.md>)
 
 - Que es una funcion?
@@ -29,18 +36,11 @@ Contenido del programa
 - Métodos Array
 - Trabajo Práctico
 
-## [Clase 2 Estructuras de flujo] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase02.md>)
+## [Clase 6 Objetos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase06.md>)
 
-- Operadores
-- Estructuras de control de flujo
-- Sentencias break/continue
-- Trabajo Práctico
-
-## [Clase 7 Objetos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase07.md>)
-
-- Objetos
+- Objetos EDITAR DOCUMETACION a ES5
 - Metodos y Propiedades
-- Los objetos Window, Document, Screen
+- Los objetos Window, Document, Screen, location, navigation, etc
 - Trabajo Práctico
 
 ## [Clase 8 Patrones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase08.md>)
@@ -56,24 +56,24 @@ Contenido del programa
 - Crear y eliminar nodos
 - Trabajo Práctico
 
-## [Clase 6 Eventos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase06.md>)
+## [Clase 7 Eventos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase07.md>)
 
 - Eventos
 - Manejadores de eventos
 - Manejadores de eventos semánticos
 - Trabajo Práctico
 
-## [Clase 9 Workshop / SCRUM] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase09.md>)
+## [Clase 9 Workshop] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase09.md>)
+
+## [Clase 10 Workshop] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase10.md>)
 
 - NO TIENE CONSIGNA
 - Trabajo Práctico
 
-## [Clase 10 Workshop / SCRUM] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase10.md>)
-
 ## [Clase 11 jQuery] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase11.md>)
 
 - Introduccion a jQuery
-- Manipulation, addClass, removeClass, afer, append, appendTo, atr, before, css, html, innerHeight, etc
+- Manipulation, addClass, removeClass, after, append, appendTo, attr, before, css, html, innerHeight, etc
 
 ## [Clase 12 jQuery Selectores] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase12.md>)
 
@@ -88,8 +88,8 @@ Contenido del programa
 ## [Clase 14 jQuery Eventos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase14.md>)
 
 - Eventos
-- blur, click, bind, focus, hover, key, on, off, etc
 - DOM Manipulation
+- blur, click, bind, focus, hover, key, on, off, etc
 - Trabajo Práctico
 
 ## [Clase 15 jQuery Funciones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase15.md>)
@@ -101,12 +101,11 @@ Contenido del programa
 
 ## [Clase 16 jQuery AJAX] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase16.md>)
 
+- API
 - AJAX
-- XMLHttpRequest
-- $.ajax NO TIENE CONTENIDO
+- $.ajax (XMLHttpRequest) NO TIENE CONTENIDO
 - JSON
 - GET/POST
-- API
 - Trabajo Práctico
 
 ## Clase 17 Proyecto Final
