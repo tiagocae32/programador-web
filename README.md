@@ -40,7 +40,7 @@ Contenido del programa
 
 - Objetos EDITAR DOCUMETACION a ES5
 - Metodos y Propiedades
-- Los objetos window, document, Screen, location, navigation, etc
+- Los objetos window, document, Screen, location, navigation, sessionStorage, localStorage, etc
 - Trabajo Práctico
 
 ## [Clase 8 Patrones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase08.md>)
@@ -54,6 +54,7 @@ Contenido del programa
 - Árbol de nodos
 - Acceso a los nodos
 - Crear y eliminar nodos
+- Propiedades de los nodos
 - Trabajo Práctico
 
 ## [Clase 7 Eventos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase07.md>)
@@ -127,7 +128,7 @@ Es requisito:
 - Entender como funciona AJAX y una API
 - Objetos y Patrones (Singleton y Module)
 - Programacion funcional
-- Saber para que siver y como levantar un servidor local con Node
+- Saber para que sirve y como levantar un servidor local con Node
 - Tener nociones sobre Grunt y Gulp para Automatizar tareas
 - Perder el miedo al CLI o linea de comandos
 
