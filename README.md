@@ -30,17 +30,18 @@ Contenido del programa
 - Variable THIS
 - Trabajo Práctico
 
-## [Clase 3 Metodos de Strings y Arrays] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase03.md>)
-
-- Métodos String
-- Métodos Array
-- Trabajo Práctico
-
 ## [Clase 6 Objetos] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase06.md>)
 
 - Objetos EDITAR DOCUMETACION a ES5
 - Metodos y Propiedades
 - Los objetos window, document, Screen, location, navigation, sessionStorage, localStorage, etc
+- Trabajo Práctico
+
+## [Clase 3 Metodos de Strings y Arrays] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase03.md>)
+
+- Métodos String
+- Métodos Array
+- Métodos Date
 - Trabajo Práctico
 
 ## [Clase 8 Patrones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase08.md>)
