@@ -10,27 +10,25 @@ A pesar de su nombre, JavaScript no guarda ninguna relación directa con el leng
 
 # ¿Como incluir JavaScript en nuestro archivo?
 
+--------------------------------------------------------------------------------
 
------
-
-## Interno 
+## Interno
 
 El código JavaScript se encierra entre etiquetas **script** y se incluye en cualquier parte del documento. Aunque es correcto incluir cualquier bloque de código en cualquier zona de la página, se recomienda definir el código JavaScript dentro de la cabecera del documento (dentro de la etiqueta **head**):
 
 ```
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Ejemplo de código JavaScript en el propio documento</title>
-<script type="text/javascript">
-alert("Un mensaje de prueba");
-</script>
-</head>
-<body>
-<p>Un párrafo de texto.</p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript">
+      alert("Un mensaje de prueba");
+    </script>
+  </head>
+  <body>
+    <p>Un párrafo de texto.</p>
+  </body>
 </html>
 ```
 
@@ -40,9 +38,7 @@ Este método se emplea cuando se define un bloque pequeño de código o cuando s
 
 El principal inconveniente es que si se quiere hacer una modificación en el bloque de código, es necesario modificar todas las páginas que incluyen ese mismo bloque de código JavaScript.
 
-
-
------
+--------------------------------------------------------------------------------
 
 ## Externo
 
@@ -57,17 +53,16 @@ alert("Un mensaje de prueba");
 Documento XHTML
 
 ```
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Ejemplo de código JavaScript en el propio documento</title>
-<script type="text/javascript" src="/js/codigo.js"></script>
-</head>
- 
-<body>
-<p>Un párrafo de texto.</p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript" src="/js/codigo.js"></script>
+  </head>
+  <body>
+    <p>Un párrafo de texto.</p>
+  </body>
 </html>
 ```
 
@@ -79,25 +74,23 @@ Los archivos de tipo JavaScript son documentos normales de texto con la extensi�
 
 La principal ventaja de enlazar un archivo JavaScript externo es que se simplifica el código XHTML de la página, que se puede reutilizar el mismo código JavaScript en todas las páginas del sitio web y que cualquier modificación realizada en el archivo JavaScript se ve reflejada inmediatamente en todas las páginas XHTML que lo enlazan
 
-
-
------
+--------------------------------------------------------------------------------
 
 ## Inline
 
 Este último método es el menos utilizado, ya que consiste en incluir trozos de JavaScript dentro del código XHTML de la página:
 
 ```
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Ejemplo de código JavaScript en el propio documento</title>
-</head>
- 
-<body>
-<p onclick="alert('Un mensaje de prueba')">Un párrafo de texto.</p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript" src="/js/codigo.js"></script>
+  </head>
+  <body>
+    <p onclick="alert('Un mensaje de prueba')">Un párrafo de texto.</p>
+  </body>
 </html>
 ```
 
@@ -109,15 +102,15 @@ La sintaxis de un lenguaje de programación se define como el conjunto de reglas
 
 La sintaxis de JavaScript es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:
 
-* No se tienen en cuenta los espacios en blanco y las nuevas líneas: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)
+- No se tienen en cuenta los espacios en blanco y las nuevas líneas: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)
 
-* Se distinguen las mayúsculas y minúsculas: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.
+- Se distinguen las mayúsculas y minúsculas: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.
 
-* No se define el tipo de las variables: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.
+- No se define el tipo de las variables: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.
 
-* No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter ;. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (;).
+- No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter ;. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (;).
 
-* Se pueden incluir comentarios: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios.
+- Se pueden incluir comentarios: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios.
 
 JavaScript define dos tipos de comentarios: los de una sola línea y los que ocupan varias líneas.
 
@@ -139,7 +132,7 @@ en los comentarios */
 alert("mensaje de prueba");
 ```
 
-Los comentarios multilínea se definen encerrando el texto del comentario entre los símbolos /* y */.
+Los comentarios multilínea se definen encerrando el texto del comentario entre los símbolos / _y_ /.
 
 # Palabras reservadas
 
@@ -148,6 +141,7 @@ Las palabras reservadas son las palabras (en inglés) que se utilizan para const
 JavaScript tiene varias palabras reservadas que no se pueden usar como identificadores. Las palabras reservadas tienen un significado específico para el lenguaje JavaScript, ya que forman parte de la sintaxis del lenguaje. El uso de una palabra reservada produce un error de compilación al cargar el script.
 
 # Variables
+
 Las variables en los lenguajes de programación siguen una lógica similar a las variables utilizadas en otros ámbitos como las matemáticas. Una variable es un elemento que se emplea para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear "programas genéricos", es decir, programas que funcionan siempre igual independientemente de los valores concretos utilizados.
 
 De la misma forma que si en Matemáticas no existieran las variables no se podrían definir las ecuaciones y fórmulas, en programación no se podrían hacer programas realmente útiles sin las variables.
@@ -156,9 +150,9 @@ Si no existieran variables, un programa que suma dos números podría escribirse
 
 ```
 resultado = 3 + 1
-
 ```
-El programa anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso, el programa obtiene un resultado incorrecto.
+
+El programa anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1\. En cualquier otro caso, el programa obtiene un resultado incorrecto.
 
 Sin embargo, el programa se puede rehacer de la siguiente manera utilizando variables para almacenar y referirse a cada número:
 
@@ -178,8 +172,7 @@ var numero_2 = 1;
 var resultado = numero_1 + numero_2;
 ```
 
-La palabra reservada var solamente se debe indicar al definir por primera vez la variable, lo que se denomina declarar una variable. Cuando se utilizan las variables en
-el resto de instrucciones del script, solamente es necesario indicar su nombre. En otras palabras, en el ejemplo anterior sería un error indicar lo siguiente:
+La palabra reservada var solamente se debe indicar al definir por primera vez la variable, lo que se denomina declarar una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre. En otras palabras, en el ejemplo anterior sería un error indicar lo siguiente:
 
 ```
 var numero_1 = 3;
@@ -221,14 +214,13 @@ En cualquier caso, se recomienda declarar todas las variables que se vayan a uti
 
 Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada var), la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)
 
+--------------------------------------------------------------------------------
 
------
 ## Nombres correctos e incorrectos
 
 El nombre de una variable también se conoce como identificador y debe cumplir las siguientes normas:
 
-•	Sólo puede estar formado por letras, números y los símbolos $ (dólar) y _ (guión bajo).
-•	El primer carácter no puede ser un número.
+• Sólo puede estar formado por letras, números y los símbolos $ (dólar) y _ (guión bajo). • El primer carácter no puede ser un número.
 
 Por tanto, las siguientes variables tienen nombres correctos:
 
@@ -246,23 +238,18 @@ var 1numero; // Empieza por un número
 var numero;1_123; // Contiene un carácter ";"
 ```
 
-
------
-
-
+--------------------------------------------------------------------------------
 
 ## Numéricas
 
-Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o decimales (llamados float en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter “.” (punto) en vez de “,” (coma) para separar la parte entera y la parte decimal:
+Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o decimales (llamados float en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter "." (punto) en vez de "," (coma) para separar la parte entera y la parte decimal:
 
 ```
 var iva = 16; // variable tipo entero
 var total = 234.65; // variable tipo decimal
 ```
 
-
-
------
+--------------------------------------------------------------------------------
 
 ## Cadenas de texto
 
@@ -305,12 +292,11 @@ var texto2 = "Una frase con \"comillas dobles\" dentro";
 
 Este mecanismo de JavaScript se denomina "mecanismo de escape" de los caracteres problemáticos, y es habitual referirse a que los caracteres han sido "escapados".
 
-
------
+--------------------------------------------------------------------------------
 
 ## Arrays
 
-En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. No obstante,  el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.
+En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.
 
 Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo: si una aplicación necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:
 
@@ -326,8 +312,7 @@ Aunque el código anterior no es incorrecto, sí que es poco eficiente y complic
 En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:
 
 ```
-var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado",
-"Domingo"];
+var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 ```
 
 Ahora, una única variable llamada dias almacena todos los valores relacionados entre sí, en este caso los días de la semana. Para definir un array, se utilizan los caracteres [ y ] para delimitar su comienzo y su final y se utiliza el carácter , (coma) para separar sus elementos:
@@ -347,8 +332,7 @@ En el ejemplo anterior, la primera instrucción quiere obtener el primer element
 
 El valor dias[5] hace referencia al elemento que ocupa la sexta posición dentro del array dias. Como las posiciones empiezan a contarse en 0, la posición 5 hace referencia al sexto elemento, en este caso, el valor Sábado.
 
-
------
+--------------------------------------------------------------------------------
 
 ## Booleanos
 
@@ -361,19 +345,17 @@ Los únicos valores que pueden almacenar estas variables son true y false, por l
 ```
 var clienteRegistrado = false;
 var ivaIncluido = true;
-
 ```
 
-
------
+--------------------------------------------------------------------------------
 
 ## Nulos e indefinidos
 
 **Null**
 
-Para poder hablar de null y undefined en Javascript hemos de tener claro que “undefined” es un tipo de dato, al igual que lo son el Number, String, Boolean, Object o el Array.
+Para poder hablar de null y undefined en Javascript hemos de tener claro que "undefined" es un tipo de dato, al igual que lo son el Number, String, Boolean, Object o el Array.
 
-En Javascript, a diferencia de otros lenguajes de programación con fuerte tipado, podemos tener variables de tipo “undefined”. A priori puede sonar un poco extraño, pero si lo pensamos un momento, tiene sentido dado que Javascript, al ser un lenguaje débilmente tipado, nos permite declarar variables sin especificar de qué tipo serán los valores que contenga. De esa forma, Javascript considerará a la variable de un tipo de dato u otro en función de su contenido, por ejemplo:
+En Javascript, a diferencia de otros lenguajes de programación con fuerte tipado, podemos tener variables de tipo "undefined". A priori puede sonar un poco extraño, pero si lo pensamos un momento, tiene sentido dado que Javascript, al ser un lenguaje débilmente tipado, nos permite declarar variables sin especificar de qué tipo serán los valores que contenga. De esa forma, Javascript considerará a la variable de un tipo de dato u otro en función de su contenido, por ejemplo:
 
 ```
 var number1 = 123; // Tipo Number
@@ -381,21 +363,19 @@ var number2 = "123" // Tipo String
 var number3;
 ```
 
-En vista de que la variable “number3” no tiene un valor asignado, ¿de qué tipo es? Dado que todas las variables han de tener siempre un tipo, en este caso Javascript considera la variable “number3” de tipo undefined.
+En vista de que la variable "number3" no tiene un valor asignado, ¿de qué tipo es? Dado que todas las variables han de tener siempre un tipo, en este caso Javascript considera la variable "number3" de tipo undefined.
 
 En resumen, en Javascript, todas aquellas variables que no han sido definidas (por lo tanto, no existen) o que han sido definidas sin asignárseles un valor, son siempre de tipo undefined.
 
-Por su parte, en Javascript al igual que en otros muchos lenguajes de programación, el valor “null” es un valor especial. El valor null es en sí mismo un valor, pero un valor que indica la ausencia de contenido, el valor vacío. Si escribimos el siguiente código:
+Por su parte, en Javascript al igual que en otros muchos lenguajes de programación, el valor "null" es un valor especial. El valor null es en sí mismo un valor, pero un valor que indica la ausencia de contenido, el valor vacío. Si escribimos el siguiente código:
 
 ```
 var number1 = null;
-
 ```
-¿De qué tipo es la variable “number1” ahora? Para Javascript, dado que a la variable number1 se le ha asignado el valor null, es una variable de tipo Object ahora mismo.
 
+¿De qué tipo es la variable "number1" ahora? Para Javascript, dado que a la variable number1 se le ha asignado el valor null, es una variable de tipo Object ahora mismo.
 
-
------
+--------------------------------------------------------------------------------
 
 # Operadores
 
@@ -403,9 +383,7 @@ Las variables por sí solas son de poca utilidad. Hasta ahora, sólo se ha visto
 
 Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.
 
-
-
------
+--------------------------------------------------------------------------------
 
 ## Asignación
 
@@ -415,7 +393,7 @@ El operador de asignación es el más utilizado y el más sencillo. Este operado
 var numero1 = 3;
 ```
 
-A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha  del operador, se pueden indicar variables, valores, condiciones lógicas, etc:
+A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha del operador, se pueden indicar variables, valores, condiciones lógicas, etc:
 
 ```
 var numero1 = 3;
@@ -433,9 +411,7 @@ numero1 = 5;
 numero1 = numero2;
 ```
 
-
------
-
+--------------------------------------------------------------------------------
 
 ## Incremento y decremento
 
@@ -483,8 +459,7 @@ numero++;
 alert(numero); // numero = 6
 ```
 
-El resultado de ejecutar el script anterior es el mismo que cuando se utiliza el operador
-++numero, por lo que puede parecer que es equivalente indicar el operador ++ delante o detrás del identificador de la variable. Sin embargo, el siguiente ejemplo muestra sus diferencias:
+El resultado de ejecutar el script anterior es el mismo que cuando se utiliza el operador ++numero, por lo que puede parecer que es equivalente indicar el operador ++ delante o detrás del identificador de la variable. Sin embargo, el siguiente ejemplo muestra sus diferencias:
 
 ```
 var numero1 = 5;
@@ -502,10 +477,7 @@ Si el operador ++ se indica como prefijo del identificador de la variable, su va
 
 Por tanto, en la instrucción numero3 = numero1++ + numero2;, el valor de numero1 se incrementa después de realizar la operación (primero se suma y numero3 vale 7, después se incrementa el valor de numero1 y vale 6). Sin embargo, en la instrucción numero3 = ++numero1 + numero2;, en primer lugar se incrementa el valor de numero1 y después se realiza la suma (primero se incrementa numero1 y vale 6, después se realiza la suma y numero3 vale 8).
 
-
-
------
-
+--------------------------------------------------------------------------------
 
 ## Matemáticos
 
@@ -523,7 +495,7 @@ resultado = numero1 * numero 2; // resultado = 50
 
 Además de los cuatro operadores básicos, JavaScript define otro operador matemático que no es sencillo de entender cuando se estudia por primera vez, pero que es muy útil en algunas ocasiones.
 
-Se trata del operador "módulo", que calcula el resto de la división entera de dos números. Si se divide por ejemplo 10 y 5, la división es exacta y da un resultado de 2. El resto de esa división es 0, por lo que módulo de 10 y 5 es igual a 0.
+Se trata del operador "módulo", que calcula el resto de la división entera de dos números. Si se divide por ejemplo 10 y 5, la división es exacta y da un resultado de 2\. El resto de esa división es 0, por lo que módulo de 10 y 5 es igual a 0.
 
 Sin embargo, si se divide 9 y 5, la división no es exacta, el resultado es 1 y el resto 4, por lo que módulo de 9 y 5 es igual a 4.
 
@@ -550,9 +522,7 @@ numero1 /= 5; // numero1 = numero1 / 5 = 1
 numero1 %= 4; // numero1 = numero1 % 4 = 1
 ```
 
-
-
------
+--------------------------------------------------------------------------------
 
 ## Relacionales
 
@@ -600,4 +570,3 @@ resultado = texto3 >= texto2; // resultado = false
 ```
 
 Cuando se utilizan cadenas de texto, los operadores "mayor que" (>) y "menor que" (<) siguen un razonamiento no intuitivo: se compara letra a letra comenzando desde la izquierda hasta que se encuentre una diferencia entre las dos cadenas de texto. Para determinar si una letra es mayor o menor que otra, las mayúsculas se consideran menores que las minúsculas y las primeras letras del alfabeto son menores que las últimas (a es menor que b, b es menor que c, A es menor que a, etc.)
-
