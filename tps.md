@@ -1,141 +1,160 @@
-# Sintaxis y Variables - Trabajo Practico
+# Sintaxis y Variables
 
-Realizar, mediante prompt, una simple calculadora. Primero debe pregunta qué desea hacer(sumar, restar, multiplicar, dividir). Luego recibe los dos parámetros y muestra el resultado mediante un alert
+TP: Realizar una calculadora que realize las siguientes operaciones sumar, restar, multiplicar y dividir:
+- Devera ingresar un valor mediante un prompt
+- Devera ingresar otro valor mediante otro prompt
+- Mostrar el resultado de cada operacion mediante distintos alert
 
-# Operadores - Trabajo Practico
+# Operadores
 
-- Condicionales
-- Ciclos e iteraciones
-- Sentencias break/continue
-- Trabajo Práctico
+TP: Crear un programa que evalue cuales son los dias de la semana y cuales son los dias de fin de semana
+- Devera poder ingresar un dia de la semana
+- Devera poder compararlo con todos los dias de la semana
+- Devera evaluar si es un dia de semana y fin de semana mediante un mensaje similar a 'El _dia_ es habil' sino 'El _dia_ es fin de semana';
+- En caso de cnontrar el dia utilizar la sentencia break y terminar el for
 
-# Funciones - Trabajo Practico
+# Funciones
 
-- Que es una funcion?
-- Alcance de las variables
-- Valores de Retorno
-- Return
-- Self Invoking
-- Variable THIS
-- Trabajo Práctico
+TP: Mejorar la calculadora seprando en funciones cada operacione
+- Devera poder ingresar 2 valores
+- Devera poder ingresar que operacion quiere realizar
+- Cada operacion tendra que ser una funcion con los 2 paramentros para sumar, restar, multiplicar o dividir;
+- Devera mostrar el resultado de la operacion en consola
 
-# Objetos - Trabajo Practico
+# Objetos
 
-- Objetos EDITAR DOCUMETACION a ES5
-- Metodos y Propiedades
+Ex: Hacer un objeto que represente un Auto
+- Devera tener las propiedades color, modelo, patente, marca, prendido, velocidad y velocidad maxima
+- Devera tener los metodos encender, acelerar, mostrar velocidad actual, frenar y apagar
+- Por lo tanto mediante el metodo acelerar tendra que ir aumentando la propiedad velocidad hasta llegar a la velocidad maxima.
 
-- Ejercicios:
+TP: Crear una funcion que agregue objetos peliculas
+- El objeto pelicula devera tener ID, titulo, descripcion, año, duracion, actores, director
+- Devera tener metodos para editar todas sus propiedades, menos su ID, y para los actores tendra que ir agregando uno a uno
 
-- Crear un objeto mascota
+# Metodos de Strings y Arrays
 
-- Acceder a las propiedades mediante puntos o nombre ('mi propiedad')
+Ex: Crear una funcion para cargar un autos a un camion
+- El auto tendra que tener al menos patente y peso
+- El camnion tiene un peso maximo de carga
+- El objeto camnion devera validar con cada auto ingresado si esta por debajo del peso o si ya no lo puede agregar
+- Ademas de almacenar los autos debe tener la posibilidad de validar que no tenga patentes repetidas y que me devuelva todas las patentes que tiene a bordo.
 
-- Propiedades que se completan con variables
+TP: Crear un array de peliculas
+- Crear una funcion que agrege una pelicula al array de peliculas
+- La pelicula debera tener un ID y un Titulo
+- Crear una funcion que evalue antes de agregar que la pelicula no fue ingresada previamente
+- Crear una funcion que ordene las peliculas por Titulo y por ID
+- Crear una funcion que elimine una pelicula por su ID.
 
-- Crear dinamicamente un objeto mediante un prompt
-- Actualizar propiedades de un objeto
-- Eliminar propiedades de un objeto
-- Recorrer un objeto for in
-- Distintos tipos de datos en los Objetivos
-- Multi nivel de objetos
-- Funciones en objetvos
+# Patrones
 
-- Trabajo Práctico
+Ex: Crear el modulo Diario
+- El objeto noticia debera contener un id, un titulo, una descripcion y una imagen
+- El modulo devera validar que la noticia no fue ingresada previamente
+- El modulo devera tener la posibilidad de eliminar una noticia por ID
+- El modulo devera tener la posibilidad de ordernar sus noticias
+- El modulo debera persistir las noticias creadas en session o local storage, por lo tanto cuando recargue deberan volver a aparecer.
 
-- Agregar objetos a un Array y mostrarlos en el DOM
+TP: Crear el modulo IMDB
+- El array de peliculas tendra que ser privado del modulo
+- El modulo tendra que poder agregar una pelicula (ID y titulo)
+- Validar que la pelicula ingresada no se encuentre y en caso de encontrarla mostrar un mensaje advirtiendo el error
+- El modulo tendra que eliminar una pelicula por ID
+- El modulo tendra que ordernar su array de pelicuas en base a una propiedad enviada por paramentro y mostrarlo en consola
+- El modulo tendra que persistir el array de peliculas en session o local storage para que luego se pueda recuperar y seguir agregando o eliminando
 
-- Crear un formulario para cargar peliculas que tenga los siguientes campos:
+# DOM
 
-- Titulo
+Ex: Crear el modulo Diario
+- El modulo devera, de forma privada o publica, mostrar/renderizar las noticias en el DOM
+- El titulo devera ser un H1, la descipcion un P y la imagen un img
+- A travez del modulo debera tener la posibilidad de eliminar del DOM la noticia por ID que desee
 
-- Duracion
+TP: Mejorar el modulo IMDB
+- El modulo devera, de forma privada o publica, mostrar/renderizar las peliculas en el DOM
+- El objeto pelicula ahora devera tener la propiedad descripcion e imagen
+- El titulo devera ser un H1, la descipcion un P y la imagen un img
 
-- Cover
-- A medida que se cargan debe ir mostrandose en el DOM
+# Eventos
 
-# Metodos de Strings y Arrays - Trabajo Practico
+Ex: Mejorar el modulo Diario
+- Crear un formulario que tenga los campos titulo, descripcion y uno donde poder ingresar un link a la imagen.
+- Este formulario tendra que tener un boton ("agregar"), el cual devera permitir al modulo Diario agregar una pelicula
+- Este formulario devera tener tambien un boton ("mostrar todos"), el cual devera permitir al modulo Diario mostrar todas las noticias
+- Incluir otros botones para poder ordenar por AZ ZA e ID y Diario
+- En caso de encontrarse noticias persistidas tendran que volver a renderizarse
+- Al renderizar la noticia en el DOM se devera poder marcar leida y no volver a mostrarse
 
-- Métodos String
-- Métodos Array
-- Métodos Date
-- Trabajo Práctico
+TP: Mejorar el modulo IMDB
+- Crear un formulario que tenga los campos titulo, descripcion y uno donde poder ingresar un link a la imagen.
+- Este formulario tendra que tener un boton ("agregar"), el cual devera permitir al modulo IMDB agregar una pelicula
+- Este formulario devera tener tambien un boton ("mostrar todos"), el cual devera permitir al modulo IMDB mostrar todas las peliculas
+- Incluir otros botones para poder ordenar por AZ ZA e ID y mostrarlos
+- En caso de encontrarse peliculas persistidas tendran que volver a renderizarse
 
-# Patrones - Trabajo Practico
+# Workshop*2
 
-- Patrones, que son, para que sirven
-- Singleton
-- Module Patterns
-- Los objetos window, document, Screen, location, navigation, sessionStorage, localStorage, etc
-- Objetos nativos del DOM
+Realizar un ToDo List, debera tener las siguientes funcionalidades:
 
-Ejercicios
+- Crear el modulo ToDoList
+- El modulo debera tener los metodos necesarios para Agregar, Editar, Mostrar Todos, Buscar y Eliminar.
+- Una tarea contiene las siguientes propiedades: id, titulo, descripcion y completado
+- Se tiene que poder editar titulo y descripcion de una tarea
+- Cambiar a estado completado y descompletado(?) una tarea
+- Eliminar una tarea o todas las tareas
+- Ordernar por A-Z y Z-A las tareas ya sea por titulo como por ID
+- Las tareas deveran quedar persistidas mediante localstorage y poder mostrarse en caso de recargar el browser
 
-- Averiguar el ancho de la window, Screen
-- Distintas propiedades location
-- Distintas propiedades Navigation
-- Session y localStorage .setItem, .getItem, .removeItem
-- JSON.stringify y JSON.parse
+# jQuery
 
-- Trabajo Práctico
+TP: Lista de articulos
+- Crearse varias clases con background-color, fuentes, tamaños y colores
+- Crear una noticia / articulo
+- Incluir un boton que agregue articulos y con distintas clases, para hacer de estos distintos uno del otro.
 
-- Crear un modulo que exponga metodos para agregar, eliminar, editar y renderizar titulos de peliculas.
-- Mediante metodos privados ir renderizndo y persistiendo en localStorage
+# jQuery Selectores
 
-# DOM - Trabajo Practico
+TP: Mediante selectores aplicarle los estilos a una lista de articulos
+- Devera tener los registros pares de un color y los registros impares de otro
+- La primer y ultima articulo deberan tener fuente en bold
 
-- Árbol de nodos
-- Acceso a los nodos
-- Crear y eliminar nodos
-- Propiedades de los nodos
-- Trabajo Práctico
+# jQuery Eventos
 
-# Eventos - Trabajo Practico
+Ex: Telefono
+- Maquetar el teclado del Telefono y un display
+- Los botones deberan ser clickeables y mostrar lo clickeable en el display
+- Adicionalmente capturar el teclado para marcar y mostrar en el display
 
-- Eventos
-- Manejadores de eventos
-- Manejadores de eventos semánticos
-- Trabajo Práctico
+TP: Blog
+- El blog debera tener la posibilidad de generar articulos
+- Titulo, descripcion, imagen
+- Una vez completado agregarlo al principio del listado
 
-# Workshop - Trabajo Practico
+# jQuery Efectos
 
-# Workshop - Trabajo Practico
+Ex: Pelota
+- Tener una lista de acciones en la que deberan estar distintas animaciones, mostrar y ocultar
+- Maquetar una Pelota
+- Cada accion debera interactuar con ella, desde animarse en las cuatro coordenas, hasta aparecer y desaparecer en fade
 
-- NO TIENE CONSIGNA
+TP: Blog
+- Al agregar un articulo se debera animarse
+- Al hacer hover sobre un articulo el resto debera ponerse en opacity 0.5
 
-# jQuery - Trabajo Practico
-
-- Introduccion a jQuery
-- Manipulation, addClass, removeClass, after, append, appendTo, attr, before, css, html, innerHeight, etc
-
-## Consigna
-
-- Luego de que termine de cargar el documento, ejecutar una funcion que agregue una clase al body para que el fondo cambie de color; -
-
-# jQuery Selectores - Trabajo Practico
-
-- Selectores
-- todo tipo de selectores, has, :, :input, prev, sibilings, not, odd, password, visible, etc
-
-# jQuery Efectos - Trabajo Practico
-
-- Efectos
-- Fade, Animate, delay, finish, slide, toggle, show, hide, etc
-
-# jQuery Eventos - Trabajo Practico
-
-- Eventos
-- DOM Manipulation
-- blur, click, bind, focus, hover, key, on, off, etc
-- Trabajo Práctico
-
-# jQuery Funciones - Trabajo Practico
+# jQuery Funciones
 
 - Utilities y Programacion funcional
 - extend, inArray, isArray, each, data, contains, isNumeric, trim, etc
 - DOM methods, each, get, index, size, toArray, data, removeData, etc
 - NO TIENE CONTENIDO
 
-# jQuery AJAX - Trabajo Practico
+TP: Blog
+- Refactorizar el codigo generado para que sea 100% Programacion funcional, desde las iteraciones hasta la forma en la que se interactura con el DOM
+- Aplicar un menu con filtros
+- Extender el objeto articulo para que cada uno tenga una categoria distintas
+
+# jQuery AJAX
 
 - API
 - AJAX
@@ -144,8 +163,29 @@ Ejercicios
 - GET/POST
 - Trabajo Práctico
 
+Ex: Leer JSONs locales, HTMLs (vistas) locales y mostrarlos
+
+TP: Blog secciones
+
+- Hacer un menu que contenga otras secciones en otros HTMLs
+- Al hacer click en cada sesccion debera cargar cada una de las secciones ejecutando su propio script
+- Sacar todos los articlos del DOM, pasarlos a objetos y tenerlo en un json
+
 # Clase 17 Proyecto Final
 
+Construir una aplicacion similar a Tinder, siendo capaz de listar y mostrar elementos sobre alguna de estas tematicas:
+
+- Musica <https://api.spotify.com/v1/search?type=artist&q=roadhouse%20blues>
+- Peliculas <http://netflixroulette.net/api/api.php?director=Quentin%20Tarantino>
+- Media - Imagenes <https://anapioficeandfire.com/>
+- Juegos <http://pokeapi.co/>
+- Recetas <http://www.recipepuppy.com/api>
+- Github - repositorios <https://api.github.com/repositories> y/o usuarios <https://api.github.com/users>
+- Mas apis en <https://github.com/toddmotto/public-apis>
+
+- Reproduciendo la misma dinamica de Tinder, la aplicacion tendra que listar y validar que me gusta y que no
+- Aquellos elementos que no fueron escogidos no deberan volver a aparecer
+- El usuario tiene que tener la posibilidad de borrar historial y volver a comenzar a seleccionar items.
 - Levantar un servidor local con Node y Express
 - Subirlo a Github
 - Conectarlo a Heroku y deployarlo
