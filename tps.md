@@ -1,43 +1,43 @@
 # Sintaxis y Variables
 
 TP: Realizar una calculadora que realize las siguientes operaciones sumar, restar, multiplicar y dividir:
-- Devera ingresar un valor mediante un prompt
-- Devera ingresar otro valor mediante otro prompt
+- Debera ingresar un valor mediante un prompt
+- Debera ingresar otro valor mediante otro prompt
 - Mostrar el resultado de cada operacion mediante distintos alert
 
 # Operadores
 
 TP: Crear un programa que evalue cuales son los dias de la semana y cuales son los dias de fin de semana
-- Devera poder ingresar un dia de la semana
-- Devera poder compararlo con todos los dias de la semana
-- Devera evaluar si es un dia de semana y fin de semana mediante un mensaje similar a 'El _dia_ es habil' sino 'El _dia_ es fin de semana';
+- Debera poder ingresar un dia de la semana
+- Debera poder compararlo con todos los dias de la semana
+- Debera evaluar si es un dia de semana y fin de semana mediante un mensaje similar a 'El _dia_ es habil' sino 'El _dia_ es fin de semana';
 - En caso de cnontrar el dia utilizar la sentencia break y terminar el for
 
 # Funciones
 
 TP: Mejorar la calculadora seprando en funciones cada operacione
-- Devera poder ingresar 2 valores
-- Devera poder ingresar que operacion quiere realizar
+- Debera poder ingresar 2 valores
+- Debera poder ingresar que operacion quiere realizar
 - Cada operacion tendra que ser una funcion con los 2 paramentros para sumar, restar, multiplicar o dividir;
-- Devera mostrar el resultado de la operacion en consola
+- Debera mostrar el resultado de la operacion en consola
 
 # Objetos
 
 Ex: Hacer un objeto que represente un Auto
-- Devera tener las propiedades color, modelo, patente, marca, prendido, velocidad y velocidad maxima
-- Devera tener los metodos encender, acelerar, mostrar velocidad actual, frenar y apagar
+- Debera tener las propiedades color, modelo, patente, marca, prendido, velocidad y velocidad maxima
+- Debera tener los metodos encender, acelerar, mostrar velocidad actual, frenar y apagar
 - Por lo tanto mediante el metodo acelerar tendra que ir aumentando la propiedad velocidad hasta llegar a la velocidad maxima.
 
 TP: Crear una funcion que agregue objetos peliculas
-- El objeto pelicula devera tener ID, titulo, descripcion, año, duracion, actores, director
-- Devera tener metodos para editar todas sus propiedades, menos su ID, y para los actores tendra que ir agregando uno a uno
+- El objeto pelicula Debera tener ID, titulo, descripcion, año, duracion, actores, director
+- Debera tener metodos para editar todas sus propiedades, menos su ID, y para los actores tendra que ir agregando uno a uno
 
 # Metodos de Strings y Arrays
 
 Ex: Crear una funcion para cargar un autos a un camion
 - El auto tendra que tener al menos patente y peso
 - El camnion tiene un peso maximo de carga
-- El objeto camnion devera validar con cada auto ingresado si esta por debajo del peso o si ya no lo puede agregar
+- El objeto camnion Debera validar con cada auto ingresado si esta por debajo del peso o si ya no lo puede agregar
 - Ademas de almacenar los autos debe tener la posibilidad de validar que no tenga patentes repetidas y que me devuelva todas las patentes que tiene a bordo.
 
 TP: Crear un array de peliculas
@@ -51,9 +51,9 @@ TP: Crear un array de peliculas
 
 Ex: Crear el modulo Diario
 - El objeto noticia debera contener un id, un titulo, una descripcion y una imagen
-- El modulo devera validar que la noticia no fue ingresada previamente
-- El modulo devera tener la posibilidad de eliminar una noticia por ID
-- El modulo devera tener la posibilidad de ordernar sus noticias
+- El modulo Debera validar que la noticia no fue ingresada previamente
+- El modulo Debera tener la posibilidad de eliminar una noticia por ID
+- El modulo Debera tener la posibilidad de ordernar sus noticias
 - El modulo debera persistir las noticias creadas en session o local storage, por lo tanto cuando recargue deberan volver a aparecer.
 
 TP: Crear el modulo IMDB
@@ -67,29 +67,29 @@ TP: Crear el modulo IMDB
 # DOM
 
 Ex: Crear el modulo Diario
-- El modulo devera, de forma privada o publica, mostrar/renderizar las noticias en el DOM
-- El titulo devera ser un H1, la descipcion un P y la imagen un img
+- El modulo Debera, de forma privada o publica, mostrar/renderizar las noticias en el DOM
+- El titulo Debera ser un H1, la descipcion un P y la imagen un img
 - A travez del modulo debera tener la posibilidad de eliminar del DOM la noticia por ID que desee
 
 TP: Mejorar el modulo IMDB
-- El modulo devera, de forma privada o publica, mostrar/renderizar las peliculas en el DOM
-- El objeto pelicula ahora devera tener la propiedad descripcion e imagen
-- El titulo devera ser un H1, la descipcion un P y la imagen un img
+- El modulo Debera, de forma privada o publica, mostrar/renderizar las peliculas en el DOM
+- El objeto pelicula ahora Debera tener la propiedad descripcion e imagen
+- El titulo Debera ser un H1, la descipcion un P y la imagen un img
 
 # Eventos
 
 Ex: Mejorar el modulo Diario
 - Crear un formulario que tenga los campos titulo, descripcion y uno donde poder ingresar un link a la imagen.
-- Este formulario tendra que tener un boton ("agregar"), el cual devera permitir al modulo Diario agregar una pelicula
-- Este formulario devera tener tambien un boton ("mostrar todos"), el cual devera permitir al modulo Diario mostrar todas las noticias
+- Este formulario tendra que tener un boton ("agregar"), el cual Debera permitir al modulo Diario agregar una pelicula
+- Este formulario Debera tener tambien un boton ("mostrar todos"), el cual Debera permitir al modulo Diario mostrar todas las noticias
 - Incluir otros botones para poder ordenar por AZ ZA e ID y Diario
 - En caso de encontrarse noticias persistidas tendran que volver a renderizarse
-- Al renderizar la noticia en el DOM se devera poder marcar leida y no volver a mostrarse
+- Al renderizar la noticia en el DOM se Debera poder marcar leida y no volver a mostrarse
 
 TP: Mejorar el modulo IMDB
 - Crear un formulario que tenga los campos titulo, descripcion y uno donde poder ingresar un link a la imagen.
-- Este formulario tendra que tener un boton ("agregar"), el cual devera permitir al modulo IMDB agregar una pelicula
-- Este formulario devera tener tambien un boton ("mostrar todos"), el cual devera permitir al modulo IMDB mostrar todas las peliculas
+- Este formulario tendra que tener un boton ("agregar"), el cual Debera permitir al modulo IMDB agregar una pelicula
+- Este formulario Debera tener tambien un boton ("mostrar todos"), el cual Debera permitir al modulo IMDB mostrar todas las peliculas
 - Incluir otros botones para poder ordenar por AZ ZA e ID y mostrarlos
 - En caso de encontrarse peliculas persistidas tendran que volver a renderizarse
 
@@ -104,7 +104,7 @@ Realizar un ToDo List, debera tener las siguientes funcionalidades:
 - Cambiar a estado completado y descompletado(?) una tarea
 - Eliminar una tarea o todas las tareas
 - Ordernar por A-Z y Z-A las tareas ya sea por titulo como por ID
-- Las tareas deveran quedar persistidas mediante localstorage y poder mostrarse en caso de recargar el browser
+- Las tareas Deberan quedar persistidas mediante localstorage y poder mostrarse en caso de recargar el browser
 
 # jQuery
 
@@ -116,7 +116,7 @@ TP: Lista de articulos
 # jQuery Selectores
 
 TP: Mediante selectores aplicarle los estilos a una lista de articulos
-- Devera tener los registros pares de un color y los registros impares de otro
+- Debera tener los registros pares de un color y los registros impares de otro
 - La primer y ultima articulo deberan tener fuente en bold
 
 # jQuery Eventos
