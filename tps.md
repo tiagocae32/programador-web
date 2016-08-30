@@ -1,11 +1,13 @@
 # Sintaxis y Variables
 
+Ex: 
+
 TP: Realizar una calculadora que realize las siguientes operaciones sumar, restar, multiplicar y dividir:
 - Debera ingresar un valor mediante un prompt
 - Debera ingresar otro valor mediante otro prompt
 - Mostrar el resultado de cada operacion mediante distintos alert
 
-# Operadores
+# Control de flujo
 
 TP: Crear un programa que evalue cuales son los dias de la semana y cuales son los dias de fin de semana
 - Debera poder ingresar un dia de la semana

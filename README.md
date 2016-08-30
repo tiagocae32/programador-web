@@ -13,7 +13,7 @@ Contenido del programa
 - Operadores
 - Trabajo Práctico
 
-## [Clase 2 Operadores] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase02.md>)
+## [Clase 2 Control de flujo] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase02.md>)
 
 - Condicionales
 - Ciclos e iteraciones
