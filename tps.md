@@ -1,6 +1,10 @@
 # Sintaxis y Variables
 
-Ex: 
+Ex: Nombre y Operaciones
+- Pedir nombre mediante prompt y disparar un alert con algun texto mas
+- Pedir un numero y sumarlo a otro que este en una variable
+- Pedir un numeor y restarlo a otro que este en una variable
+- Pedir un numero, luego otro y ambos sumarlos
 
 TP: Realizar una calculadora que realize las siguientes operaciones sumar, restar, multiplicar y dividir:
 - Debera ingresar un valor mediante un prompt
@@ -9,6 +13,10 @@ TP: Realizar una calculadora que realize las siguientes operaciones sumar, resta
 
 # Control de flujo
 
+Ex: Dias de la semana
+- Crear un array con todos los dias de la semana
+- Recorrerlos y mostrar cuando sea domingo o sabado un mensaje en consola.
+
 TP: Crear un programa que evalue cuales son los dias de la semana y cuales son los dias de fin de semana
 - Debera poder ingresar un dia de la semana
 - Debera poder compararlo con todos los dias de la semana
@@ -16,6 +24,10 @@ TP: Crear un programa que evalue cuales son los dias de la semana y cuales son l
 - En caso de cnontrar el dia utilizar la sentencia break y terminar el for
 
 # Funciones
+
+Ex: Pequeñas funciones
+- Crear una funcion que pida nombre y apellido y lo muestre en la consola
+- Crear una funcion que en base a un paramentro muestre los dias habiles o de fines de semana en consola
 
 TP: Mejorar la calculadora seprando en funciones cada operacione
 - Debera poder ingresar 2 valores

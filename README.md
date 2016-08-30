@@ -41,7 +41,6 @@ Contenido del programa
 
 - Métodos String
 - Métodos Array
-- Métodos Date
 - Trabajo Práctico
 
 ## [Clase 8 Patrones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase08.md>)
