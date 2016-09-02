@@ -4,86 +4,81 @@ Un objeto es entidad existente en la memoria del ordenador que tiene unas propie
 
 En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
 
+
+1. Using a function
+```
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = getAppleInfo;
+}
+
+var apple = new Apple('macintosh');
+apple.color = "reddish";
+alert(apple.getInfo());
+
+```
+
+1.1. Methods defined internally
+```
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = function() {
+        return this.color + ' ' + this.type + ' apple';
+    };
+}
+```
+
+1.2. Methods added to the prototype
+```
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+}
+ 
+Apple.prototype.getInfo = function() {
+    return this.color + ' ' + this.type + ' apple';
+};
+```
+
+2. Using object literals
+```
+var apple = {
+    type: "macintosh",
+    color: "red",
+    getInfo: function () {
+        return this.color + ' ' + this.type + ' apple';
+    }
+}
+apple.color = "reddish";
+alert(apple.getInfo());
+```
+
+3. Singleton using a function
+```
+var apple = new function() {
+    this.type = "macintosh";
+    this.color = "red";
+    this.getInfo = function () {
+        return this.color + ' ' + this.type + ' apple';
+    };
+}
+
+apple.color = "reddish";
+alert(apple.getInfo());
+```
+
+
 # Propiedades
 
 Las propiedadesson las características intrínsecas del objeto. Éstas, se representan a modo de variables, solo que técnicamente, pasan a denominarse propiedades:
-
-```
-class Antena():
-    color = ""
-    longitud = ""
-
-class Pelo():
-    color = ""
-    textura = ""
-
-class Ojo():
-    forma = ""
-    color = ""
-    tamanio = ""
-
-class Objeto():
-    color = ""
-    tamanio = ""
-    aspecto = ""
-    antenas = Antena() # propiedad compuesta por el  objeto Antena
-    ojos = Ojo()       # propiedad compuesta por el  objeto Ojo
-    pelos = Pelo()     # propiedad compuesta por el  objeto Pelo
-```
 
 Las propiedades se definen de la misma forma que las variables (aplican las mismas reglas de estilo).
 
 # Herencia
 
 Algunos objetos comparten las mismas propiedades y métodos que otro objeto, y además agregan nuevas propiedades y métodos. A esto se lo denomina herencia: una clase que hereda de otra. Vale aclarar, que en Python, cuando una clase no hereda de ninguna otra, debe hacerse heredar de object, que es la clase principal de Python, que define un objeto.
-
-Por ejemplo:
-
-```
-class Antena(object):
-    color = ""
-    longitud = ""
-
-class Pelo(object):
-    color = ""
-    textura = ""
-
-class Ojo(object):
-    forma = ""
-    color = ""
-    tamanio = ""
-
-class Objeto(object):
-    color = ""
-    tamanio = ""
-    aspecto = ""
-    antenas = Antena()
-    ojos = Ojo()
-    pelos = Pelo()
-
-    def flotar(self):
-        pass
-
-class Dedo(object):
-    longitud = ""
-    forma = ""
-    color = ""
-
-class Pie(object):
-    forma = ""
-    color = ""
-    dedos = Dedo()
-```
-
-NuevoObjeto sí hereda de otra clase: Objeto
-
-```
-class NuevoObjeto(Objeto):
-    pie = Pie()
-
-    def saltar(self):
-        pass
-```
 
 --------------------------------------------------------------------------------
 
