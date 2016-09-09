@@ -129,7 +129,7 @@ Es requisito:
 - Programacion funcional
 - Saber para que sirve y como levantar un servidor local con Node
 - Tener nociones sobre Grunt y Gulp para Automatizar tareas
-- Perder el miedo al CLI o linea de comandos
+- Tener conocimientos básicos de CLI o linea de comandos
 
 ## Para el Nivel 3 Experto Full Stack
 - Tener nociones de Base de datos
