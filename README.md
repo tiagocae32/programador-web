@@ -124,22 +124,3 @@
 
 - NO TIENE CONSIGNA
 
-## Para el Nivel 3 (en comun)
-
-Es requisito:
-- Entender como funciona AJAX y una API
-- Objetos y Patrones (Singleton y Module)
-- Programacion funcional
-- Saber para que sirve y como levantar un servidor local con Node
-- Tener nociones sobre Grunt y Gulp para Automatizar tareas
-- Tener conocimientos básicos de CLI o linea de comandos
-
-## Para el Nivel 3 Experto Full Stack
-- Tener nociones de Base de datos
-
-## Para el Nivel 3 Experto Frontend
-- Tener nociones de Base de datos
-- HTML y CSS
-
-## Para el Nivel 3 Experto Móvil
-- HTML y CSS
