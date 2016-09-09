@@ -1,6 +1,7 @@
 # Programador Web Nivel 2
 
-Contenido del programa
+## Requisitos:
+- Completar el curso de [JavaScript de Codecademy]  (<https://www.codecademy.com/learn/javascript>)
 
 ## [Clase 1 Sintaxis y Variables] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase01.md>)
 
