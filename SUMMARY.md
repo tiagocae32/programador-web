@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* clase2
+* [clase2](clase02.md)
 
