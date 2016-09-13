@@ -9,14 +9,14 @@
 - Variables
 - Tipos de variables
 - Operadores
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Control de flujo
 
 - Condicionales
 - Ciclos e iteraciones
 - Sentencias break/continue
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Funciones
 
@@ -26,20 +26,20 @@
 - Return
 - Self Invoking
 - Variable THIS
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Objetos
 
-- Objetos EDITAR DOCUMETACION a ES5
+- Objetos
 - Metodos y Propiedades
 - Los objetos window, document, Screen, location, navigation, sessionStorage, localStorage, etc
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Metodos de Strings y Arrays
 
-- Métodos String
-- Métodos Array
-- Trabajo Práctico
+- Metodos String
+- Metodos Array
+- Trabajo Práctico :white_check_mark:
 
 ## Patrones
 
@@ -53,14 +53,14 @@
 - Acceso a los nodos
 - Crear y eliminar nodos
 - Propiedades de los nodos
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Eventos
 
 - Eventos
 - Manejadores de eventos
 - Manejadores de eventos semánticos
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Workshop I
 
@@ -72,7 +72,7 @@
 ## jQuery Selectores
 
 - Selectores
-- todo tipo de selectores, has, :, :input, prev, sibilings, not, odd, password, visible, etc
+- Todo tipo de selectores, has, :, :input, prev, sibilings, not, odd, password, visible, etc
 
 ## jQuery Efectos
 
@@ -84,7 +84,7 @@
 - Eventos
 - DOM Manipulation
 - blur, click, bind, focus, hover, key, on, off, etc
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## jQuery Funciones
 
@@ -100,6 +100,6 @@
 - $.ajax (XMLHttpRequest) NO TIENE CONTENIDO
 - JSON
 - GET/POST
-- Trabajo Práctico
+- Trabajo Práctico :white_check_mark:
 
 ## Proyecto Final
