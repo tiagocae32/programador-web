@@ -2,7 +2,7 @@
 
 ## Sintaxis y Variables
 
-- Que es una Javascript?
+- Qué es una Javascript?
 - Inclusión de Javascript en nuestro archivo
 - Sintaxis
 - Palabras reservadas
@@ -20,7 +20,7 @@
 
 ## Funciones
 
-- Que es una funcion?
+- Qué es una funcion?
 - Alcance de las variables
 - Valores de Retorno
 - Return
