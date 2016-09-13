@@ -2,7 +2,7 @@
 
 ## Sintaxis y Variables
 
-* Qué es una Javascript?
+* ¿Qué es una Javascript?
 * Inclusión de Javascript en nuestro archivo
 * Sintaxis
 * Palabras reservadas
