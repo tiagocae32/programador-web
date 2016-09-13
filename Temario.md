@@ -65,7 +65,7 @@
 
 -----------
 
-## Workshop :large_blue_circle:
+## :star: Workshop :star:
 * Durante el primer Workshop haremos una ToDo List
 
 ------------
@@ -113,7 +113,7 @@
 
 ------------
 
-## Proyecto Final :checkered_flag:
+## :checkered_flag: Proyecto Final :checkered_flag:
 
 * Crearemos una aplicación al estilo Tinder
 
