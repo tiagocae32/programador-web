@@ -65,7 +65,7 @@
 
 -----------
 
-## Workshop: large_blue_circle:
+## Workshop :large_blue_circle:
 - Durante el primer Workshop haremos una ToDo List
 
 ------------
