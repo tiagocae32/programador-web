@@ -5,7 +5,7 @@
 
 ------------
 
-## [Clase 1 Sintaxis y Variables] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/clase01.md>)
+## Sintaxis y Variables
 
 - Que es una Javascript?
 - Inclusión de Javascript en nuestro archivo
