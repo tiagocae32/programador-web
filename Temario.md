@@ -63,7 +63,13 @@
 - Manejadores de eventos semánticos
 - Trabajo Práctico :white_check_mark:
 
-## Workshop I
+-----------
+
+## Workshop I :large_blue_circle:
+
+- Durante el primer Workshop haremos una ToDo List
+
+------------
 
 ## jQuery
 
@@ -107,4 +113,12 @@
 - GET/POST
 - Trabajo Práctico :white_check_mark:
 
-## Proyecto Final
+------------
+
+## Proyecto Final :checkered_flag:
+
+- Crearemos una aplicación al estilo Tinder
+
+------------
+
+
