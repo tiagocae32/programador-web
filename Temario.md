@@ -46,6 +46,7 @@
 - Patrones, que son, para que sirven
 - Singleton
 - Module Patterns
+- Trabajo Práctico :white_check_mark:
 
 ## DOM
 
@@ -68,16 +69,19 @@
 
 - Introduccion a jQuery
 - Manipulation, addClass, removeClass, after, append, appendTo, attr, before, css, html, innerHeight, etc
+- Trabajo Práctico :white_check_mark:
 
 ## jQuery Selectores
 
 - Selectores
 - Todo tipo de selectores, has, :, :input, prev, sibilings, not, odd, password, visible, etc
+- Trabajo Práctico :white_check_mark:
 
 ## jQuery Efectos
 
 - Efectos
 - Fade, Animate, delay, finish, slide, toggle, show, hide, etc
+- Trabajo Práctico :white_check_mark:
 
 ## jQuery Eventos
 
@@ -92,6 +96,7 @@
 - extend, inArray, isArray, each, data, contains, isNumeric, trim, etc
 - DOM methods, each, get, index, size, toArray, data, removeData, etc
 - NO TIENE CONTENIDO
+- Trabajo Práctico :white_check_mark:
 
 ## jQuery AJAX
 
