@@ -43,7 +43,7 @@
 
 ## Patrones
 
-- Patrones, que son, para que sirven
+- Patrones, qué son, para que sirven
 - Singleton
 - Module Patterns
 - Trabajo Práctico :white_check_mark:
@@ -100,14 +100,13 @@
 - Utilities y Programacion funcional
 - extend, inArray, isArray, each, data, contains, isNumeric, trim, etc
 - DOM methods, each, get, index, size, toArray, data, removeData, etc
-- NO TIENE CONTENIDO
 - Trabajo Práctico :white_check_mark:
 
 ## jQuery AJAX
 
 - API
 - AJAX
-- $.ajax (XMLHttpRequest) NO TIENE CONTENIDO
+- $.ajax (XMLHttpRequest)
 - JSON
 - GET/POST
 - Trabajo Práctico :white_check_mark:
