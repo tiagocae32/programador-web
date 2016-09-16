@@ -1,7 +1,7 @@
 # Diseñador Web - Certificación 
 
 ## Beginner
-* Challenge 1: [Nombre y Operaciones] (<>)
+* Challenge 1: [Nombre y Operaciones] (<programa-programador-web-nivel-2/challenge01.md>)
 * Challenge 2: [Días de la semana] (<>)
 * Challenge 3: [Pequeñas funciones] (<>)
 * Challenge 4: [Auto] (<>)
