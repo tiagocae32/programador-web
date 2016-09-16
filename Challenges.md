@@ -1,4 +1,4 @@
-# Diseñador Web - Certificación 
+# Programador Web - Certificación 
 
 ## Beginner
 * Challenge 1: [Nombre y Operaciones] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/challenge01.md>)
