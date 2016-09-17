@@ -1,4 +1,4 @@
-# Proyecto Fianl
+# Proyecto Final
 
 Construir una aplicacion similar a Tinder, siendo capaz de listar y mostrar elementos sobre alguna de estas tematicas:
 
