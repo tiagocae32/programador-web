@@ -14,3 +14,11 @@
 * [TP 12] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/TP12.md>)
 * [TP 13] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/TP13.md>)
 * [TP 14] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/TP14.md>)
+
+-------------
+
+* [Workshop] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/Workshop01.md>)
+
+-------------
+
+* [Proyecto Final] (<https://github.com/CoderHouse/programa-programador-web-nivel-2/blob/master/ProyectoFinal.md>)
