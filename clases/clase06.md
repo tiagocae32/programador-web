@@ -80,6 +80,21 @@ Las propiedades se definen de la misma forma que las variables (aplican las mism
 
 Algunos objetos comparten las mismas propiedades y métodos que otro objeto, y además agregan nuevas propiedades y métodos. A esto se lo denomina herencia: una clase que hereda de otra. Vale aclarar, que en Python, cuando una clase no hereda de ninguna otra, debe hacerse heredar de object, que es la clase principal de Python, que define un objeto.
 
+```
+function Felino () {}
+ 
+Felino.prototype = new Animal();
+Felino.prototype.constructor = Felino;
+ 
+Felino.prototype.maullar = function () {
+  console.log('meowwwww');
+};
+ 
+var iris = new Felino();
+iris.crecer();
+iris.maullar();
+```
+
 --------------------------------------------------------------------------------
 
 # Patrón Módulo en JavaScript (Module Pattern)
