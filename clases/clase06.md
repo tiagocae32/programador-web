@@ -5,7 +5,7 @@ Un objeto es entidad existente en la memoria del ordenador que tiene unas propie
 En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
 
 
-1. Using a function
+1. Usando una
 ```
 function Apple (type) {
     this.type = type;
@@ -19,7 +19,7 @@ alert(apple.getInfo());
 
 ```
 
-1.1. Methods defined internally
+1.1. Mediante una funcion interna
 ```
 function Apple (type) {
     this.type = type;
@@ -30,7 +30,7 @@ function Apple (type) {
 }
 ```
 
-1.2. Methods added to the prototype
+1.2. Mediante prototype
 ```
 function Apple (type) {
     this.type = type;
@@ -42,7 +42,7 @@ Apple.prototype.getInfo = function() {
 };
 ```
 
-2. Using object literals
+2. Usando objetos literales
 ```
 var apple = {
     type: "macintosh",
@@ -55,7 +55,7 @@ apple.color = "reddish";
 alert(apple.getInfo());
 ```
 
-3. Singleton using a function
+3. Usando un singleton mediante una funcion
 ```
 var apple = new function() {
     this.type = "macintosh";
