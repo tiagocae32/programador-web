@@ -4,3 +4,9 @@
 * Pedir un número y sumarlo a otro que este en una variable
 * Pedir un númeor y restarlo a otro que este en una variable
 * Pedir un número, luego otro y ambos sumarlos
+
+
+-------
+
+# Resolución
+
