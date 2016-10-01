@@ -15,6 +15,11 @@ Reproduciendo la misma dinamica de Tinder, la aplicacion tendra que listar y val
 
 * Aquellos elementos que no fueron escogidos no deberan volver a aparecer
 * El usuario tiene que tener la posibilidad de borrar historial y volver a comenzar a seleccionar items.
+* El usuario tiene que tener ver listadas aquellos items que selecciono.
+* Puede incluir cualquier libreria para gestionar los estilos
+
+Adicionalmente
+
 * Levantar un servidor local con Node y Express
 * Subirlo a Github
 * Conectarlo a Heroku y deployarlo
