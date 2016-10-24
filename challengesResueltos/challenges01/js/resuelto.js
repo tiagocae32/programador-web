@@ -9,4 +9,5 @@ var segundoResultado = tercerNumero - primerResultado;
 
 var cuartoNumero = prompt("ingresa el cuarto numero");
 var quintoNumero = prompt("ingresa el quinto numero");
-var tercerResultado = (cuartoNumero * quintoNumero) / segundoResultado;
+var tercerResultado = cuartoNumero * quintoNumero;
+var resultadoFinal = tercerResultado/ segundoResultado;

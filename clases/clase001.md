@@ -1,3 +1,5 @@
+<!-- $theme: default -->
+
 # ¿ Qué es un algoritmo?
 
 Un Algoritmo, se puede definir como una secuencia de instrucciones que representan un modelo de solución para determinado tipo de problemas. O bien como un conjunto de instrucciones que realizadas en orden conducen a obtener la solución de un problema.
@@ -42,5 +44,3 @@ Como hacer una llamada por telefono:
 ![alt text][ejemplo1]
 
 [ejemplo1]: http://www.desarrolloweb.com/articulos/images/algoritmos/diagrama2.gif  "algoritmosImg"
-
-**si les parece el agregar esta clase, podemos plantear ejemplos copados para poder ayudar al pensamiento de los trabajos a futuro y que no asuste tanto**

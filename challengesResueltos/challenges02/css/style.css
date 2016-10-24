@@ -1,0 +1,30 @@
+    nav a {
+        color: #424242 !important;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .usuario {
+        -webkit-margin-before: 0 !important;
+        display: inline-block;
+    }
+    #numeroChallenge {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .avisoCantidad {
+        border: solid;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        border-radius: 100px;
+        vertical-align: middle;
+        margin: 50px auto;
+    }
+    .elementos {
+        margin: 0 auto;
+    }
