@@ -1,6 +1,6 @@
 # Programador Web - Nivel 2
 
-## Introduccion a la Programacion 
+## Introduccion a la Programación 
 
 * ¿Qué es un algoritmo?
 * ¿Qué es un programa o aplicación?
