@@ -1,9 +1,6 @@
 # Programador Web - Nivel 2
 
-## Introduccion a la Programacion (algoritmos iniciales)
-**Contar un poco que es un algoritmo, lo que vamos a comenzar a usar desde esta primer clase
-es un punto muy importante para entender la programacion que vamos a realizar, asi al momento de comenzar a programar no es tan extraño lo que vean y puedan relacionarlo con situaciones ya vividas como en matematicas u otras situaciones de su vida.
-Esto nos va a permitir a los profesores usar un lenguaje unificado para explicar la logica de funcionalidades de lo que vamos a ver durante el curso**
+## Introduccion a la Programacion 
 
 * ¿Qué es un algoritmo?
 * ¿Qué es un programa o aplicacion?
