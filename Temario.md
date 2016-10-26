@@ -3,11 +3,11 @@
 ## Introduccion a la Programacion 
 
 * ¿Qué es un algoritmo?
-* ¿Qué es un programa o aplicacion?
-* Caracteristicas de un algoritmo.
+* ¿Qué es un programa o aplicación?
+* Características de un algoritmo.
 * Partes de un algoritmo.
-* ¿Como represetamos un algoritmo?
-* Ejemplos diarios de algoritmos para hacer mas natural la programacion.
+* ¿Cómo represetamos un algoritmo?
+* Ejemplos diarios de algoritmos para hacer más natural la programación.
 
 
 ## Sintaxis y Variables
@@ -51,7 +51,7 @@
 * Metodos Array
 * Trabajo Práctico :white_check_mark:
 
-## Patrones (Este tema tendria que darse con ejemplos durante el curso o al armar los tps, no una clase dedicada a este tema)
+## Patrones
 
 * Patrones, qué son, para que sirven
 * Singleton
