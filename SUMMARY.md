@@ -1,4 +1,4 @@
 # Summary
 
-* [Introduction](README.md)
+* [Acerca del Curso](README.md)
 
