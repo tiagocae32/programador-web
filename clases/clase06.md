@@ -1,218 +1,235 @@
-# Objetos
-
-Un objeto es entidad existente en la memoria del ordenador que tiene unas propiedades (atributos o datos sobre sí mismo almacenados por el objeto) y unas operaciones disponibles específicas (métodos).
-
-En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
+# Métodos String
 
 
-1. Usando una
-```
-function Apple (type) {
-    this.type = type;
-    this.color = "red";
-    this.getInfo = getAppleInfo;
-}
+-----
 
-var apple = new Apple('macintosh');
-apple.color = "reddish";
-alert(apple.getInfo());
+
+## Lenght
+Calcula la longitud de una cadena de texto (el número de caracteres que la forman)
 
 ```
-
-1.1. Mediante una funcion interna
-```
-function Apple (type) {
-    this.type = type;
-    this.color = "red";
-    this.getInfo = function() {
-        return this.color + ' ' + this.type + ' apple';
-    };
-}
+var mensaje = "Hola Mundo";
+var numeroLetras = mensaje.length; // numeroLetras = 10
 ```
 
-1.2. Mediante prototype
+## IndexOf
+
+Calcula la primera posición en la que se encuentra el carácter indicado dentro de la cadena de texto. Si la cadena no contiene el carácter, la función devuelve el valor -1:
+
 ```
-function Apple (type) {
-    this.type = type;
-    this.color = "red";
-}
+var mensaje = "Hola";
+var posicion = mensaje.indexOf('a'); // posicion = 3
+posicion = mensaje.indexOf('b'); // posicion = -1
+````
+
+La función `indexOf()` comienza su búsqueda desde el principio de la palabra y solo devuelve la primera posición de todas las existentes. Su función análoga es `lastIndexOf()`.
+
+`lastIndexOf(letra)`, calcula la última posición en la que se encuentra el carácter indicado dentro de la cadena de texto. Si la cadena no contiene el carácter, la función devuelve el valor -1:
+```
+var mensaje = "Hola";
+var posicion = mensaje.lastIndexOf(‘a’); // posicion = 3
+posicion = mensaje.lastIndexOf(‘b’); // posicion = -1
+La función lastIndexOf() comienza su búsqueda desde el final de la cadena hacia el principio, aunque la posición devuelta es la correcta empezando a contar desde el principio de la palabra.
+```
+
+## CharAt
+
+Obtiene el carácter que se encuentra en la posición indicada:
+```
+var mensaje = "Hola";
+var letra = mensaje.charAt(0); // letra = ‘H’
+letra = mensaje.charAt(2); // letra = ‘l’
+```
+
+## Substring (Inicio-Final)
+
+
+Extrae una porción de una cadena de texto. El segundo parámetro es opcional. Si solo se indica el parámetro inicio, la función devuelve la parte de la cadena original correspondiente desde esa posición hasta el final:
+```
+var mensaje = "Hola Mundo";
+var porcion = mensaje.substring(2); // porcion = "la Mundo"
+porcion = mensaje.substring(5); // porcion = "Mundo"
+porcion = mensaje.substring(7); // porcion = "ndo"
+```
+Si se indica un inicio negativo, se devuelve la misma cadena original:
+```
+var mensaje = "Hola Mundo";
+var porcion = mensaje.substring(-2); // porcion = "Hola Mundo"
+```
+Si se indica el inicio y el final, se devuelve la parte de la cadena original comprendida entre la posición inicial y la inmediatamente anterior a la posición final (es decir, la posición inicio está incluida y la posición final no):
+```
+var mensaje = "Hola Mundo";
+var porcion = mensaje.substring(1, 8); // porcion = "ola Mun"
+porcion = mensaje.substring(3, 4); // porcion = "a"
+```
+Si se indica un final más pequeño que un inicio, JavaScript los considera de forma inversa, ya que automáticamente asigna el valor más pequeño al inicio y el más grande al final:
+```
+var mensaje = "Hola Mundo";
+var porcion = mensaje.substring(5, 0); // porcion = "Hola "
+porcion = mensaje.substring(0, 5); // porcion = "Hola "
+```
+## toLowerCase
+
+Transforma todos los caracteres de la cadena a sus correspondientes caracteres en minúsculas:
+```
+var mensaje1 = "HolA";
+var mensaje2 = mensaje1.toLowerCase(); // mensaje2 = "hola"
+```
+
+## toUpperCase
+
+Transforma todos los caracteres de la cadena a sus correspondientes caracteres en mayúsculas:
+```
+var mensaje1 = "Hola";
+var mensaje2 = mensaje1.toUpperCase(); // mensaje2 = "HOLA"
+```
+
+## Concat
+
+Fa función concat() se utiliza para concatenar.
+```
+var mensaje1 = "Hola";
+var mensaje2 = mensaje1.concat(" Mundo"); // mensaje2 = "Hola Mundo"
+```
+
+## Split
+
+Convierte una cadena de texto en un array de cadenas de texto. La función parte una cadena de texto dividiendo sus trozos a partir del carácter delimitador indicado:
+```
+var mensaje = "Hola Mundo, soy una cadena de texto!";
+var palabras = mensaje.split(" ");
+// palabras = ["Hola", "Mundo,", "soy", "una", "cadena", "de", "texto!"];
+```
+Con esta función se pueden extraer fácilmente las letras que forman una palabra:
+```
+var palabra = "Hola";
+var letras = palabra.split(""); // letras = ["H", "o", "l", "a"]
+```
+
+# Métodos Array
+
+
+-----
+
+
+## toString
+
+El método `toString()` retorna una cadena de caracteres representando el array especificado y sus elementos.
+
+
+### Sintaxis
+
  
-Apple.prototype.getInfo = function() {
-    return this.color + ' ' + this.type + ' apple';
-};
-```
+`arr.toString()`
 
-2. Usando objetos literales
-```
-var apple = {
-    type: "macintosh",
-    color: "red",
-    getInfo: function () {
-        return this.color + ' ' + this.type + ' apple';
-    }
-}
-apple.color = "reddish";
-alert(apple.getInfo());
-```
 
-3. Usando un singleton mediante una funcion
-```
-var apple = new function() {
-    this.type = "macintosh";
-    this.color = "red";
-    this.getInfo = function () {
-        return this.color + ' ' + this.type + ' apple';
-    };
-}
+-----
 
-apple.color = "reddish";
-alert(apple.getInfo());
+## Push
+Transforma un array añadiendole los elementos proporcionados y devolviendo la nueva longitud del array.
+
+El método push depende de la propiedad length para decidir dónde empezar a insertar los valores dados. Si el valor de la propiedad length no puede ser convertido en numérico, el índice 0 es usado. Esto permite la posibilidad de que la propiedad length sea inexistente, y en este caso length será creado.
+
+### Síntaxis
+
+
+`array.push(element1, ..., elementN)`
+
+
+-----
+
+## Join
+El método `join()` une todos los elementos de un arreglo en una cadena.
+
+
+### Sintaxis
+
+```
+str = arr.join([separador = ','])
 ```
 
 
-# Propiedades
+-----
 
-Las propiedadesson las características intrínsecas del objeto. Éstas, se representan a modo de variables, solo que técnicamente, pasan a denominarse propiedades:
+## Sort
 
-Las propiedades se definen de la misma forma que las variables (aplican las mismas reglas de estilo).
+El metodo `sort()` ordena los elementos de un array localmente y retorna el  array. El ordenamiento no es necesariamente estable. El orden de ordenamiento por omisión es acorde a la posición valor del string en Unicode.
 
-# Herencia
 
-Algunos objetos comparten las mismas propiedades y métodos que otro objeto, y además agregan nuevas propiedades y métodos. A esto se lo denomina herencia: una clase que hereda de otra. Vale aclarar, que en Python, cuando una clase no hereda de ninguna otra, debe hacerse heredar de object, que es la clase principal de Python, que define un objeto.
+### Sintaxis
 
-```
-function Felino () {}
+
+`arr.sort([compareFunction])`
+
+
+-----
+
+## Pop
+
+
+El método pop() elimina el último elemento de un array y lo devuelve.
+
+
+### Sintaxis
+
+
+`arr.pop()`
+
+
+-----
+
+
+##  Reverse
+El metodo reverse() coloca al revés (inversamente) una matriz. El primer elemento pasa a ser el ultimo y el ultimo pasa a ser el primero.
+
+
+### Sintaxis
+
+`arr.reverse()`
+
+
+-----
+##  Concat
+
+El método concat() retorna un vector compuesto por los elementos del vector en el que fue invocado y los elementos del/de los vector/es y/o valores pasados como argumentos.
  
-Felino.prototype = new Animal();
-Felino.prototype.constructor = Felino;
- 
-Felino.prototype.maullar = function () {
-  console.log('meowwwww');
-};
- 
-var iris = new Felino();
-iris.crecer();
-iris.maullar();
-```
 
---------------------------------------------------------------------------------
+### Sintaxis
 
-# Patrón Módulo en JavaScript (Module Pattern)
-
-Los módulos son muy importantes ya que nos permiten mantener nuestro código encapsulado, sin contaminar el scope global y evitar colisión de nombres. Además nos ayudan a mantener en el proyecto unidades de código separadas y organizadas.
-
-El Module Pattern es considerado un Patrón de Diseño y en JavaScript nos ofrece la posibilidad de simular propiedades y métodos privados. Las variables y funciones en JavaScript no tienen modificadores de acceso, pero a través de los closures podemos simular este comportamiento.
-
-El Module Pattern se implementa creando una función anónima que se auto-invoca y regresa un objeto literal.
 
 ```
-var myModule = (function () {
-  var counter = 0;
-
-  return {
-    incrementCounter: function () {
-      return counter++;
-    },
-
-    resetCounter: function () {
-      console.log('Valor de counter antes de reset: ' + counter);
-      counter = 0;
-    }
-  }
-})();
-
-// Uso:
-myModule.incrementCounter();
-myModule.incrementCounter();
-myModule.resetCounter(); // Imprime 2
+var nuevo_vector = viejo_vector.concat(valor1[, valor2[, ...[, valorN]]])
 ```
 
-De esta forma al tener una función anónima creamos un scope dentro de la función, evitando así contaminar el ámbito global. Regresamos un objeto literal que contiene dos métodos, ambos métodos pueden acceder a la variable counter ya que se ha creado un closure. Así podemos simular propiedades privadas.
+`concat()`, se emplea para concatenar los elementos de varios arrays:
 
-Entonces básicamente el Module Pattern se define de la siguiente forma.
+
+
+
+-----
+## Slice
+
+El medoto `slice()` devuelve una copia de una parte del array dentro de un nuevo array. Devuelve una sección de una matriz.
+
+### Sintaxis
 
 ```
-var myModule = (function () {
-  var privateProperty = 10;
+arrayObj.slice(start, [end])
 
-  var privateMethodOne = function () {
-    // Algo
-  };
-
-  var privateMethodTwo = function () {
-    // Algo
-  };
-
-  return {
-    publicProperty: "foo",
-    publicMethodOne: function () {
-      //...
-    },
-    publicMethodTwo: function () {
-      // Invocar método privado
-      privateMethodOne();
-    },
-    publicMethodThree: privateMethodTwo //Alias de privateMethodTwo
-  }
-})();
 ```
 
-## Tipos de Herencia:
 
-Existen dos tipos de herencia
 
-- **Herencia Simple:** En esta jerarquía cada clase tiene como máximo una sola superclase. La herencia simple permite que una clase herede las propiedades y métodos de su superclase en una cadena jerárquica.
+-----
 
-- **Herencia múltiple:** Una malla o retícula consta de clases, cada una de las cuales pueden tener dos o más superclases inmediatas. Una herencia múltiple es aquella en la que cada clase puede heredar las propiedades y métodos de cualquier número de clases.
 
-# Polimorfismo
+## Splice
 
-La palabra polimorfismo significa que un objeto posee varias formas diferentes. Este es uno de los conceptos esenciales de una programación orientada a objetos. Así como la herencia está relacionada con las clases y su jerarquía, el polimorfismo se relaciona con los métodos.
+El método splice () agrega / elimina los elementos  de una matriz y devuelve el elemento (s) que se retiró.
 
-En general, hay tres tipos de polimorfismo:
+### Sintaxis
 
-- Polimorfismo de sobrecarga
-- Polimorfismo paramétrico (también llamado polimorfismo de plantillas)
-- Polimorfismo de inclusión (también llamado redefinición o subtipado)
+```
+array .splice( index , howmany , item1 ,....., itemX )
 
---------------------------------------------------------------------------------
-
-## Polimorfismo de sobrecarga
-
-El polimorfismo de sobrecarga ocurre cuando las funciones del mismo nombre existen, con funcionalidad similar, en clases que son completamente independientes una de otra (éstas no tienen que ser clases secundarias de la clase objeto). Por ejemplo, la clase complex, la clase image y la clase link pueden todas tener la función "display". Esto significa que no necesitamos preocuparnos sobre el tipo de objeto con el que estamos trabajando si todo lo que deseamos es verlo en la pantalla.
-
-Por lo tanto, el polimorfismo de sobrecarga nos permite definir operadores cuyos comportamientos varían de acuerdo a los parámetros que se les aplican. Así es posible, por ejemplo, agregar el operador + y hacer que se comporte de manera distinta cuando está haciendo referencia a una operación entre dos números enteros (suma) o bien cuando se encuentra entre dos cadenas de caracteres (concatenación).
-
---------------------------------------------------------------------------------
-
-## Polimorfismo paramétrico
-
-El polimorfismo paramétrico es la capacidad para definir varias funciones utilizando el mismo nombre, pero usando parámetros diferentes (nombre y/o tipo). El polimorfismo paramétrico selecciona automáticamente el método correcto a aplicar en función del tipo de datos pasados en el parámetro.
-
-Por lo tanto, podemos por ejemplo, definir varios métodos homónimos de addition() efectuando una suma de valores.
-
-- El método int addition(int,int) devolvería la suma de dos números enteros.
-- float addition(float, float) devolvería la suma de dos flotantes.
-- char addition(char, char) daría por resultado la suma de dos caracteres definidos por el autor.
-
-Una signature es el nombre y tipo (estático) que se da a los argumentos de una función. Por esto, una firma de método determina qué elemento se va a llamar.
-
---------------------------------------------------------------------------------
-
-## Polimorfismo de inclusión
-
-La habilidad para redefinir un método en clases que se hereda de una clase base se llama especialización. Por lo tanto, se puede llamar un método de objeto sin tener que conocer su tipo intrínseco: esto es polimorfismo de subtipado. Permite no tomar en cuenta detalles de las clases especializadas de una familia de objetos, enmascarándolos con una interfaz común (siendo esta la clase básica).
-
-Imagine un juego de ajedrez con los objetos rey, reina, alfil, caballo, torre y peón, cada uno heredando el objeto pieza.
-
-El método movimiento podría, usando polimorfismo de subtipado, hacer el movimiento correspondiente de acuerdo a la clase objeto que se llama. Esto permite al programa realizar el movimiento.de_pieza sin tener que verse conectado con cada tipo de pieza en particular.
-
-# Prototyping
-
-El patrón de diseño Prototype (Prototipo), tiene como finalidad crear nuevos objetos duplicándolos, clonando una instancia creada previamente.
-
-Este patrón especifica la clase de objetos a crear mediante la clonación de un prototipo que es una instancia ya creada. La clase de los objetos que servirán de prototipo deberá incluir en su interfaz la manera de solicitar una copia, que será desarrollada luego por las clases concretas de prototipos.
-
-La programación basada en prototipos es un estilo de programación orientada a objetos en la que las clases no están presentes y la reutilización de comportamiento (conocido como herencia en lenguajes basados en clases) se lleva a cabo a través de un proceso de decoración de objetos existentes que sirven de prototipos. Este modelo también se conoce como programación sin clases, orientada a prototipos o basada en ejemplos.
-
-El ejemplo original (y más canónico) de un lenguaje basado en prototipos es el lenguaje de programación autodesarrollado por David Ungar y Randall Smith. Sin embargo, el estilo de programación sin clases se ha hecho cada vez más popular y ha sido adoptado para lenguajes de programación como JavaScript, Cecil, NewtonScript, Io, MOO, REBOL, Kevo, Squeak (cuando se utiliza el Viewer framework para manipular los componentes Morphic) y varios otros
+```

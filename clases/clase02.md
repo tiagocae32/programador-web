@@ -1,404 +1,572 @@
+# ¿ Qué es JavaScript?
+
+JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web dinámicas.
+
+Una página web dinámica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones, acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.
+
+Técnicamente, JavaScript es un lenguaje de programación interpretado, por lo que no es necesario compilar los programas para ejecutarlos. En otras palabras, los programas escritos con JavaScript se pueden probar directamente en cualquier navegador sin necesidad de procesos intermedios.
+
+A pesar de su nombre, JavaScript no guarda ninguna relación directa con el lenguaje de programación Java. Legalmente, JavaScript es una marca registrada de la empresa Sun Microsystems
+
+# ¿Como incluir JavaScript en nuestro archivo?
+
+--------------------------------------------------------------------------------
+
+## Interno
+
+El código JavaScript se encierra entre etiquetas **script** y se incluye en cualquier parte del documento. Aunque es correcto incluir cualquier bloque de código en cualquier zona de la página, se recomienda definir el código JavaScript dentro de la cabecera del documento (dentro de la etiqueta **head**):
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript">
+      alert("Un mensaje de prueba");
+    </script>
+  </head>
+  <body>
+    <p>Un párrafo de texto.</p>
+  </body>
+</html>
+```
+
+Para que la página XHTML resultante sea válida, es necesario añadir el atributo **type** a la etiqueta **script**. Los valores que se incluyen en el atributo **type** están estandarizados y para el caso de JavaScript, el valor correcto es **text/javascript.
+
+Este método se emplea cuando se define un bloque pequeño de código o cuando se quieren incluir instrucciones específicas en un determinado documento HTML que completen las instrucciones y funciones que se incluyen por defecto en todos los documentos del sitio web.
+
+El principal inconveniente es que si se quiere hacer una modificación en el bloque de código, es necesario modificar todas las páginas que incluyen ese mismo bloque de código JavaScript.
+
+--------------------------------------------------------------------------------
+
+## Externo
+
+Las instrucciones JavaScript se pueden incluir en un archivo externo de tipo JavaScript que los documentos XHTML enlazan mediante la etiqueta **script**. Se pueden crear todos los archivos JavaScript que sean necesarios y cada documento XHTML puede enlazar tantos archivos JavaScript como necesite.
+
+Archivo codigo.js
+
+```
+alert("Un mensaje de prueba");
+```
+
+Documento XHTML
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript" src="/js/codigo.js"></script>
+  </head>
+  <body>
+    <p>Un párrafo de texto.</p>
+  </body>
+</html>
+```
+
+Además del atributo **type**, este método requiere definir el atributo **src**, que es el que indica la URL correspondiente al archivo JavaScript que se quiere enlazar.
+
+Cada etiqueta **script** solamente puede enlazar un único archivo, pero en una misma página se pueden incluir tantas etiquetas **script** como sean necesarias.
+
+Los archivos de tipo JavaScript son documentos normales de texto con la extensión .js, que se pueden crear con cualquier editor de texto como Notepad, Wordpad, EmEditor, UltraEdit, Vi, etc.
+
+La principal ventaja de enlazar un archivo JavaScript externo es que se simplifica el código XHTML de la página, que se puede reutilizar el mismo código JavaScript en todas las páginas del sitio web y que cualquier modificación realizada en el archivo JavaScript se ve reflejada inmediatamente en todas las páginas XHTML que lo enlazan
+
+--------------------------------------------------------------------------------
+
+## Inline
+
+Este último método es el menos utilizado, ya que consiste en incluir trozos de JavaScript dentro del código XHTML de la página:
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript" src="/js/codigo.js"></script>
+  </head>
+  <body>
+    <p onclick="alert('Un mensaje de prueba')">Un párrafo de texto.</p>
+  </body>
+</html>
+```
+
+El mayor inconveniente de este método es que ensucia innecesariamente el código XHTML de la página y complica el mantenimiento del código JavaScript. En general, este método sólo se utiliza para definir algunos eventos y en algunos otros casos especiales, como se verá más adelante.
+
+# Sintaxis
+
+La sintaxis de un lenguaje de programación se define como el conjunto de reglas que deben seguirse al escribir el código fuente de los programas para considerarse como correctos para ese lenguaje de programación.
+
+La sintaxis de JavaScript es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:
+
+- No se tienen en cuenta los espacios en blanco y las nuevas líneas: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)
+
+- Se distinguen las mayúsculas y minúsculas: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.
+
+- No se define el tipo de las variables: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.
+
+- No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter ;. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (;).
+
+- Se pueden incluir comentarios: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios.
+
+JavaScript define dos tipos de comentarios: los de una sola línea y los que ocupan varias líneas.
+
+Ejemplo de comentario de una sola línea:
+
+```
+// a continuación se muestra un mensaje
+alert("mensaje de prueba");
+```
+
+Los comentarios de una sola línea se definen añadiendo dos barras oblicuas (//) al principio de la línea.
+
+Ejemplo de comentario de varias líneas:
+
+```
+/* Los comentarios de varias líneas son muy útiles
+cuando se necesita incluir bastante información
+en los comentarios */
+alert("mensaje de prueba");
+```
+
+Los comentarios multilínea se definen encerrando el texto del comentario entre los símbolos / _y_ /.
+
+# Palabras reservadas
+
+Las palabras reservadas son las palabras (en inglés) que se utilizan para construir las sentencias de JavaScript y que por tanto no pueden ser utilizadas libremente. Las palabras actualmente reservadas por JavaScript son: break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instance of, new, return, switch, this, throw, try, typeof, var, void, while, with.
+
+JavaScript tiene varias palabras reservadas que no se pueden usar como identificadores. Las palabras reservadas tienen un significado específico para el lenguaje JavaScript, ya que forman parte de la sintaxis del lenguaje. El uso de una palabra reservada produce un error de compilación al cargar el script.
+
+# Variables
+
+Las variables en los lenguajes de programación siguen una lógica similar a las variables utilizadas en otros ámbitos como las matemáticas. Una variable es un elemento que se emplea para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear "programas genéricos", es decir, programas que funcionan siempre igual independientemente de los valores concretos utilizados.
+
+De la misma forma que si en Matemáticas no existieran las variables no se podrían definir las ecuaciones y fórmulas, en programación no se podrían hacer programas realmente útiles sin las variables.
+
+Si no existieran variables, un programa que suma dos números podría escribirse como:
+
+```
+resultado = 3 + 1
+```
+
+El programa anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1\. En cualquier otro caso, el programa obtiene un resultado incorrecto.
+
+Sin embargo, el programa se puede rehacer de la siguiente manera utilizando variables para almacenar y referirse a cada número:
+
+```
+numero_1 = 3
+numero_2 = 1
+resultado = numero_1 + numero_2
+```
+
+Los elementos numero_1 y numero_2 son variables que almacenan los valores que utiliza el programa. El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de las variables numero_1 y numero_2, el programa sigue funcionando correctamente.
+
+Las variables en JavaScript se crean mediante la palabra reservada var. De esta forma, el ejemplo anterior se puede realizar en JavaScript de la siguiente manera:
+
+```
+var numero_1 = 3;
+var numero_2 = 1;
+var resultado = numero_1 + numero_2;
+```
+
+La palabra reservada var solamente se debe indicar al definir por primera vez la variable, lo que se denomina declarar una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre. En otras palabras, en el ejemplo anterior sería un error indicar lo siguiente:
+
+```
+var numero_1 = 3;
+var numero_2 = 1;
+var resultado = var numero_1 + var numero_2;
+```
+
+Si cuando se declara una variable se le asigna también un valor, se dice que la variable ha sido inicializada. En JavaScript no es obligatorio inicializar las variables, ya que se pueden declarar por una parte y asignarles un valor posteriormente. Por tanto, el ejemplo anterior se puede rehacer de la siguiente manera:
+
+```
+var numero_1;
+var numero_2;
+
+numero_1 = 3;
+numero_2 = 1;
+
+var resultado = numero_1 + numero_2;
+```
+
+Una de las características más sorprendentes de JavaScript para los programadores habituados a otros lenguajes de programación es que tampoco es necesario declarar las variables. En otras palabras, se pueden utilizar variables que no se han definido anteriormente mediante la palabra reservada var. El ejemplo anterior también es correcto en JavaScript de la siguiente forma:
+
+```
+var numero_1 = 3;
+var numero_2 = 1;
+resultado = numero_1 + numero_2;
+```
+
+La variable resultado no está declarada, por lo que JavaScript crea una variable global (más adelante se verán las diferencias entre variables locales y globales) y le asigna el valor correspondiente. De la misma forma, también sería correcto el siguiente código:
+
+```
+numero_1 = 3;
+numero_2 = 1;
+resultado = numero_1 + numero_2;
+```
+
+En cualquier caso, se recomienda declarar todas las variables que se vayan a utilizar.
+
+# Tipos de variables
+
+Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada var), la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)
+
+--------------------------------------------------------------------------------
+
+## Nombres correctos e incorrectos
+
+El nombre de una variable también se conoce como identificador y debe cumplir las siguientes normas:
+
+• Sólo puede estar formado por letras, números y los símbolos $ (dólar) y _ (guión bajo). • El primer carácter no puede ser un número.
+
+Por tanto, las siguientes variables tienen nombres correctos:
+
+```
+var $numero1;
+var _$letra;
+var $$$otroNumero;
+var $_a__$4;
+```
+
+Sin embargo, las siguientes variables tienen identificadores incorrectos:
+
+```
+var 1numero; // Empieza por un número
+var numero;1_123; // Contiene un carácter ";"
+```
+
+--------------------------------------------------------------------------------
+
+## Numéricas
+
+Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o decimales (llamados float en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter "." (punto) en vez de "," (coma) para separar la parte entera y la parte decimal:
+
+```
+var iva = 16; // variable tipo entero
+var total = 234.65; // variable tipo decimal
+```
+
+--------------------------------------------------------------------------------
+
+## Cadenas de texto
+
+Se utilizan para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a la variable, se encierra el valor entre comillas dobles o simples, para delimitar su comienzo y su final:
+
+```
+var mensaje = "Bienvenido a nuestro sitio web";
+var nombreProducto = 'Producto ABC';
+var letraSeleccionada = 'c';
+```
+
+En ocasiones, el texto que se almacena en las variables no es tan sencillo. Si por ejemplo el propio texto contiene comillas simples o dobles, la estrategia que se sigue es la de encerrar el texto con las comillas (simples o dobles) que no utilice el texto:
+
+```
+/* El contenido de texto1 tiene comillas simples, por lo que
+se encierra con comillas dobles */
+
+var texto1 = "Una frase con 'comillas simples' dentro";
+
+/* El contenido de texto2 tiene comillas dobles, por lo que
+se encierra con comillas simples */
+
+var texto2 = 'Una frase con "comillas dobles" dentro';
+```
+
+No obstante, a veces las cadenas de texto contienen tanto comillas simples como dobles.
+
+Además, existen otros caracteres que son difíciles de incluir en una variable de texto (tabulador, ENTER, etc.) Para resolver estos problemas, JavaScript define un mecanismo para incluir de forma sencilla caracteres especiales y problemáticos dentro de una cadena de texto.
+
+El mecanismo consiste en sustituir el carácter problemático por una combinación simple de caracteres. A continuación se muestra la tabla de conversión que se debe utilizar:
+
+![](http://i.imgur.com/WAsqtwi.jpg)
+
+De esta forma, el ejemplo anterior que contenía comillas simples y dobles dentro del texto se puede rehacer de la siguiente forma:
+
+```
+var texto1 = 'Una frase con \'comillas simples\' dentro';
+var texto2 = "Una frase con \"comillas dobles\" dentro";
+```
+
+Este mecanismo de JavaScript se denomina "mecanismo de escape" de los caracteres problemáticos, y es habitual referirse a que los caracteres han sido "escapados".
+
+--------------------------------------------------------------------------------
+
+## Arrays
+
+En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.
+
+Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo: si una aplicación necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:
+
+```
+var dia1 = "Lunes";
+var dia2 = "Martes";
+...
+var dia7 = "Domingo";
+```
+
+Aunque el código anterior no es incorrecto, sí que es poco eficiente y complica en exceso la programación. Si en vez de los días de la semana se tuviera que guardar el nombre de los meses del año, el nombre de todos los países del mundo o las mediciones diarias de temperatura de los últimos 100 años, se tendrían que crear decenas o cientos de variables.
+
+En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:
+
+```
+var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+```
+
+Ahora, una única variable llamada dias almacena todos los valores relacionados entre sí, en este caso los días de la semana. Para definir un array, se utilizan los caracteres [ y ] para delimitar su comienzo y su final y se utiliza el carácter , (coma) para separar sus elementos:
+
+```
+var nombre_array = [valor1, valor2, ..., valorN];
+```
+
+Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. Cada elemento se accede indicando su posición dentro del array. La única complicación, que es responsable de muchos errores cuando se empieza a programar, es que las posiciones de los elementos empiezan a contarse en el 0 y no en el 1:
+
+```
+var diaSeleccionado = dias[0]; // diaSeleccionado = "Lunes"
+var otroDia = dias[5]; // otroDia = "Sábado"
+```
+
+En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. Como se ha comentado, las posiciones se empiezan a contar en el 0, por lo que el primer elemento ocupa la posición 0 y se accede a el mediante dias[0].
+
+El valor dias[5] hace referencia al elemento que ocupa la sexta posición dentro del array dias. Como las posiciones empiezan a contarse en 0, la posición 5 hace referencia al sexto elemento, en este caso, el valor Sábado.
+
+--------------------------------------------------------------------------------
+
+## Booleanos
+
+Las variables de tipo boolean o booleano también se conocen con el nombre de variables de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación avanzada con JavaScript del siguiente capítulo, su funcionamiento básico es muy sencillo.
+
+Una variable de tipo boolean almacena un tipo especial de valor que solamente puede tomar dos valores: true (verdadero) o false (falso). No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.
+
+Los únicos valores que pueden almacenar estas variables son true y false, por lo que no pueden utilizarse los valores verdadero y falso. A continuación se muestra un par de variables de tipo booleano:
+
+```
+var clienteRegistrado = false;
+var ivaIncluido = true;
+```
+
+--------------------------------------------------------------------------------
+
+## Nulos e indefinidos
+
+**Null**
+
+Para poder hablar de null y undefined en Javascript hemos de tener claro que "undefined" es un tipo de dato, al igual que lo son el Number, String, Boolean, Object o el Array.
+
+En Javascript, a diferencia de otros lenguajes de programación con fuerte tipado, podemos tener variables de tipo "undefined". A priori puede sonar un poco extraño, pero si lo pensamos un momento, tiene sentido dado que Javascript, al ser un lenguaje débilmente tipado, nos permite declarar variables sin especificar de qué tipo serán los valores que contenga. De esa forma, Javascript considerará a la variable de un tipo de dato u otro en función de su contenido, por ejemplo:
+
+```
+var number1 = 123; // Tipo Number
+var number2 = "123" // Tipo String
+var number3;
+```
+
+En vista de que la variable "number3" no tiene un valor asignado, ¿de qué tipo es? Dado que todas las variables han de tener siempre un tipo, en este caso Javascript considera la variable "number3" de tipo undefined.
+
+En resumen, en Javascript, todas aquellas variables que no han sido definidas (por lo tanto, no existen) o que han sido definidas sin asignárseles un valor, son siempre de tipo undefined.
+
+Por su parte, en Javascript al igual que en otros muchos lenguajes de programación, el valor "null" es un valor especial. El valor null es en sí mismo un valor, pero un valor que indica la ausencia de contenido, el valor vacío. Si escribimos el siguiente código:
+
+```
+var number1 = null;
+```
+
+¿De qué tipo es la variable "number1" ahora? Para Javascript, dado que a la variable number1 se le ha asignado el valor null, es una variable de tipo Object ahora mismo.
+
+--------------------------------------------------------------------------------
+
 # Operadores
 
---------------------------------------------------------------------------------
+Las variables por sí solas son de poca utilidad. Hasta ahora, sólo se ha visto cómo crear variables de diferentes tipos y cómo mostrar su valor mediante la función alert(). Para hacer programas realmente útiles, son necesarias otro tipo de herramientas.
 
-## Negación
-
-Uno de los operadores lógicos más utilizados es el de la negación. Se utiliza para obtener el valor contrario al valor de la variable:
-
-```
-var visible = true;
-alert(!visible); // Muestra "false" y no "true"
-```
-
-La negación lógica se obtiene prefijando el símbolo ! al identificador de la variable. El funcionamiento de este operador se resume en la siguiente tabla:
-
-![](http://i.imgur.com/98AK7Vc.jpg)
-
-Si la variable original es de tipo booleano, es muy sencillo obtener su negación. Sin embargo, ¿qué sucede cuando la variable es un número o una cadena de texto? Para obtener la negación en este tipo de variables, se realiza en primer lugar su conversión a un valor booleano:
-
-- Si la variable contiene un número, se transforma en false si vale 0 y en true para cualquier otro número (positivo o negativo, decimal o entero).
-- Si la variable contiene una cadena de texto, se transforma en false si la cadena es vacía ("") y en true en cualquier otro caso.
-
-```
-var cantidad = 0;
-vacio = !cantidad; // vacio = true
-
-cantidad = 2;
-vacio = !cantidad; // vacio = false
-
-var mensaje = "";
-mensajeVacio = !mensaje; // mensajeVacio = true
-
-mensaje = "Bienvenido";
-mensajeVacio = !mensaje; // mensajeVacio = false
-```
+Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.
 
 --------------------------------------------------------------------------------
 
-## Lógicos
+## Asignación
 
-Los operadores lógicos son imprescindibles para realizar aplicaciones complejas, ya que se utilizan para tomar decisiones sobre las instrucciones que debería ejecutar el programa en función de ciertas condiciones.
-
-El resultado de cualquier operación que utilice operadores lógicos siempre es un valor lógico o booleano.
-
-**AND**
-
-La operación lógica AND obtiene su resultado combinando dos valores booleanos. El operador se indica mediante el símbolo && y su resultado solamente es true si los dos operandos son true:
-
-![](http://i.imgur.com/Qs0KsSC.jpg)
+El operador de asignación es el más utilizado y el más sencillo. Este operador se utiliza para guardar un valor específico en una variable. El símbolo utilizado es = (no confundir con el operador == que se verá más adelante):
 
 ```
-var valor1 = true;
-var valor2 = false;
-resultado = valor1 && valor2; // resultado = false
-valor1 = true;
-valor2 = true;
-resultado = valor1 && valor2; // resultado = true
+var numero1 = 3;
 ```
 
-**OR**
-
-La operación lógica OR también combina dos valores booleanos. El operador se indica mediante el símbolo || y su resultado es true si alguno de los dos operandos es true:
-
-![](http://i.imgur.com/uxsO8xf.jpg)
+A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha del operador, se pueden indicar variables, valores, condiciones lógicas, etc:
 
 ```
-var valor1 = true;
-var valor2 = false;
-resultado = valor1 || valor2; // resultado = true
-valor1 = false;
-valor2 = false;
-resultado = valor1 || valor2; // resultado = false
+var numero1 = 3;
+var numero2 = 4;
+
+
+/* Error, la asignación siempre se realiza a una variable,
+por lo que en la izquierda no se puede indicar un número */
+5 = numero1;
+
+// Ahora, la variable numero1 vale 5
+numero1 = 5;
+
+// Ahora, la variable numero1
+numero1 = numero2;
 ```
-
-# Estructuras de control de flujo
-
-Los programas que se pueden realizar utilizando solamente variables y operadores son una simple sucesión lineal de instrucciones básicas.
-
-Sin embargo, no se pueden realizar programas que muestren un mensaje si el valor de una variable es igual a un valor determinado y no muestren el mensaje en el resto de casos. Tampoco se puede repetir de forma eficiente una misma instrucción, como por ejemplo sumar un determinado valor a todos los elementos de un array.
-
-Para realizar este tipo de programas son necesarias las estructuras de control de flujo, que son instrucciones del tipo "si se cumple esta condición, hazlo; si no se cumple, haz esto otro". También existen instrucciones del tipo "repite esto mientras se cumpla esta condición".
-
-Si se utilizan estructuras de control de flujo, los programas dejan de ser una sucesión lineal de instrucciones para convertirse en programas inteligentes que pueden tomar decisiones en función del valor de las variables.
 
 --------------------------------------------------------------------------------
 
-## Estructura If
+## Incremento y decremento
 
-La estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación es la estructura if. Se emplea para tomar decisiones en función de una condición. Su definición formal es:
-
-```
-if(condicion) {
-...
-}
-```
-
-Si la condición se cumple (es decir, si su valor es true) se ejecutan todas las instrucciones que se encuentran dentro de {...}. Si la condición no se cumple (es decir, si su valor es false) no se ejecuta ninguna instrucción contenida en {...} y el programa continúa ejecutando el resto de instrucciones del script.
+Estos dos operadores solamente son válidos para las variables numéricas y se utilizan para incrementar o decrementar en una unidad el valor de una variable.
 
 Por Ejemplo:
 
 ```
-var mostrarMensaje = true;
-if(mostrarMensaje) {
-alert("Hola Mundo");
-}
+var numero = 5;
+++numero;
+alert(numero); // numero = 6
+```
+
+El operador de incremento se indica mediante el prefijo ++ en el nombre de la variable.
+
+El resultado es que el valor de esa variable se incrementa en una unidad. Por tanto, el anterior ejemplo es equivalente a:
+
+```
+var numero = 5;
+numero = numero + 1;
+alert(numero); // numero = 6
+```
+
+De forma equivalente, el operador decremento (indicado como un prefijo -- en el nombre de la variable) se utiliza para decrementar el valor de la variable:
+
+```
+var numero = 5;
+--numero;
+alert(numero); // numero = 4
+```
+
+El anterior ejemplo es equivalente a:
+
+```
+var numero = 5;
+numero = numero - 1;
+alert(numero); // numero = 4
+```
+
+Los operadores de incremento y decremento no solamente se pueden indicar como prefijo del nombre de la variable, sino que también es posible utilizarlos como sufijo. En este caso, su comportamiento es similar pero muy diferente. En el siguiente ejemplo:
+
+```
+var numero = 5;
+numero++;
+alert(numero); // numero = 6
+```
+
+El resultado de ejecutar el script anterior es el mismo que cuando se utiliza el operador ++numero, por lo que puede parecer que es equivalente indicar el operador ++ delante o detrás del identificador de la variable. Sin embargo, el siguiente ejemplo muestra sus diferencias:
+
+```
+var numero1 = 5;
+var numero2 = 2;
+numero3 = numero1++ + numero2;
+// numero3 = 7, numero1 = 6
+
+var numero1 = 5;
+var numero2 = 2;
+numero3 = ++numero1 + numero2;
+// numero3 = 8, numero1 = 6
+```
+
+Si el operador ++ se indica como prefijo del identificador de la variable, su valor se incrementa antes de realizar cualquier otra operación. Si el operador ++ se indica como sufijo del identificador de la variable, su valor se incrementa después de ejecutar la sentencia en la que aparece.
+
+Por tanto, en la instrucción numero3 = numero1++ + numero2;, el valor de numero1 se incrementa después de realizar la operación (primero se suma y numero3 vale 7, después se incrementa el valor de numero1 y vale 6). Sin embargo, en la instrucción numero3 = ++numero1 + numero2;, en primer lugar se incrementa el valor de numero1 y después se realiza la suma (primero se incrementa numero1 y vale 6, después se realiza la suma y numero3 vale 8).
+
+--------------------------------------------------------------------------------
+
+## Matemáticos
+
+JavaScript permite realizar manipulaciones matemáticas sobre el valor de las variables numéricas. Los operadores definidos son: suma (+), resta (-), multiplicación (*) y división (/). Por Ejemplo:
+
+```
+var numero1 = 10;
+var numero2 = 5;
+
+resultado = numero1 / numero2; // resultado = 2
+resultado = 3 + numero1; // resultado = 13
+resultado = numero2 – 4; // resultado = 1
+resultado = numero1 * numero 2; // resultado = 50
+```
+
+Además de los cuatro operadores básicos, JavaScript define otro operador matemático que no es sencillo de entender cuando se estudia por primera vez, pero que es muy útil en algunas ocasiones.
+
+Se trata del operador "módulo", que calcula el resto de la división entera de dos números. Si se divide por ejemplo 10 y 5, la división es exacta y da un resultado de 2\. El resto de esa división es 0, por lo que módulo de 10 y 5 es igual a 0.
+
+Sin embargo, si se divide 9 y 5, la división no es exacta, el resultado es 1 y el resto 4, por lo que módulo de 9 y 5 es igual a 4.
+
+El operador módulo en JavaScript se indica mediante el símbolo %, que no debe confundirse con el cálculo del porcentaje:
+
+```
+var numero1 = 10;
+var numero2 = 5;
+resultado = numero1 % numero2; // resultado = 0
+
+numero1 = 9;
+numero2 = 5;
+resultado = numero1 % numero2; // resultado = 4
+```
+
+Los operadores matemáticos también se pueden combinar con el operador de asignación para abreviar su notación:
+
+```
+var numero1 = 5;
+numero1 += 3; // numero1 = numero1 + 3 = 8
+numero1 -= 1; // numero1 = numero1 - 1 = 4
+numero1 *= 2; // numero1 = numero1 * 2 = 10
+numero1 /= 5; // numero1 = numero1 / 5 = 1
+numero1 %= 4; // numero1 = numero1 % 4 = 1
 ```
 
 --------------------------------------------------------------------------------
 
-## Estructura If-else
+## Relacionales
 
-En ocasiones, las decisiones que se deben realizar no son del tipo "si se cumple la condición, hazlo; si no se cumple, no hagas nada". Normalmente las condiciones suelen ser del tipo "si se cumple esta condición, hazlo; si no se cumple, haz esto otro".
+Los operadores relacionales definidos por JavaScript son idénticos a los que definen las matemáticas: mayor que (>), menor que (<), mayor o igual (>=), menor o igual (<=), igual que (==) y distinto de (!=).
 
-Para este segundo tipo de decisiones, existe una variante de la estructura if llamada if...else. Su definición formal es la siguiente:
-
-```
-
-if(condicion) {
-...
-}
-else {
-...
-}
-```
-
-Si la condición se cumple (es decir, si su valor es true) se ejecutan todas las instrucciones que se encuentran dentro del if(). Si la condición no se cumple (es decir, si su valor es false) se ejecutan todas las instrucciones contenidas en else { }.
-
-Por Ejemplo:
+Los operadores que relacionan variables son imprescindibles para realizar cualquier aplicación compleja, como se verá en el siguiente capítulo de programación avanzada. El resultado de todos estos operadores siempre es un valor booleano:
 
 ```
-var edad = 18;
-if(edad >= 18) {
-alert("Eres mayor de edad");
-}
-else {
-alert("Todavía eres menor de edad");
-}
+var numero1 = 3;
+var numero2 = 5;
+resultado = numero1 > numero2; // resultado = false
+resultado = numero1 < numero2; // resultado = true
+
+
+numero1 = 5;
+numero2 = 5;
+resultado = numero1 >= numero2; // resultado = true
+resultado = numero1 <= numero2; // resultado = true
+resultado = numero1 == numero2; // resultado = true
+resultado = numero1 != numero2; // resultado = false
 ```
 
-Si el valor de la variable edad es mayor o igual que el valor numérico 18, la condición del if() se cumple y por tanto, se ejecutan sus instrucciones y se muestra el mensaje "Eres mayor de edad". Sin embargo, cuando el valor de la variable edad no es igual o mayor que 18, la condición del if() no se cumple, por lo que automáticamente se ejecutan todas las instrucciones del bloque else { }. En este caso, se mostraría el mensaje "Todavía eres menor de edad".
-
---------------------------------------------------------------------------------
-
-## Estructura for
-
-Las estructuras if y if-else no son muy eficientes cuando se desea ejecutar de forma repetitiva una instrucción. Por ejemplo, si se quiere mostrar un mensaje cinco veces, se podría pensar en utilizar el siguiente if:
+Se debe tener especial cuidado con el operador de igualdad (==), ya que es el origen de la mayoría de errores de programación, incluso para los usuarios que ya tienen cierta experiencia desarrollando scripts. El operador == se utiliza para comparar el valor de dos variables, por lo que es muy diferente del operador =, que se utiliza para asignar un valor a una variable:
 
 ```
-var veces = 0;
-if(veces < 4) {
-alert("Mensaje");
-veces++;
-}
+// El operador "=" asigna valores
+var numero1 = 5;
+resultado = numero1 = 3; // numero1 = 3 y resultado = 3
+
+// El operador "==" compara variables
+var numero1 = 5;
+resultado = numero1 == 3; // numero1 = 5 y resultado = false
 ```
 
-Se comprueba si la variable veces es menor que 4\. Si se cumple, se entra dentro del if(), se muestra el mensaje y se incrementa el valor de la variable veces. Así se debería seguir ejecutando hasta mostrar el mensaje las cinco veces deseadas.
-
-Sin embargo, el funcionamiento real del script anterior es muy diferente al deseado, ya que solamente se muestra una vez el mensaje por pantalla. La razón es que la ejecución de la estructura if() no se repite y la comprobación de la condición sólo se realiza una vez, independientemente de que dentro del if() se modifique el valor de la variable utilizada en la condición.
-
-La estructura for permite realizar este tipo de repeticiones (también llamadas bucles) de una forma muy sencilla. No obstante, su definición formal no es tan sencilla como la de if():
+Los operadores relacionales también se pueden utilizar con variables de tipo cadena de texto:
 
 ```
-for(inicializacion; condicion; actualizacion) {
-...
-}
+var texto1 = "hola";
+var texto2 = "hola";
+var texto3 = "adios";
+
+resultado = texto1 == texto3; // resultado = false
+resultado = texto1 != texto2; // resultado = false
+resultado = texto3 >= texto2; // resultado = false
 ```
 
-La idea del funcionamiento de un bucle for es la siguiente: "mientras la condición indicada se siga cumpliendo, repite la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición".
-
-- La "inicialización" es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.
-- La "condición" es el único elemento que decide si continua o se detiene la repetición.
-- La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.
-
-```
-var mensaje = "Hola, estoy dentro de un bucle";
-for(var i = 0; i < 5; i++) {
-alert(mensaje);
-}
-```
-
-La parte de la inicialización del bucle consiste en:
-
-```
-var i = 0;
-```
-
-Por tanto, en primer lugar se crea la variable i y se le asigna el valor de 0\. Esta zona de inicialización solamente se tiene en consideración justo antes de comenzar a ejecutar el bucle. Las siguientes repeticiones no tienen en cuenta esta parte de inicialización.
-
-La zona de condición del bucle es:
-
-```
-i < 5
-```
-
-Los bucles se siguen ejecutando mientras se cumplan las condiciones y se dejan de ejecutar justo después de comprobar que la condición no se cumple. En este caso, mientras la variable "i" valga menos de 5 el bucle se ejecuta indefinidamente.
-
-Como la variable "i" se ha inicializado a un valor de 0 y la condición para salir del bucle es que "i" sea menor que 5, si no se modifica el valor de i de alguna forma, el bucle se repetiría indefinidamente.
-
-Por ese motivo, es imprescindible indicar la zona de actualización, en la que se modifica el valor de las variables que controlan el bucle:
-
-```
-i++
-```
-
-En este caso, el valor de la variable "i" se incrementa en una unidad después de cada repetición. La zona de actualización se ejecuta después de la ejecución de las instrucciones que incluye el for.
-
-Así, durante la ejecución de la quinta repetición el valor de "i" será 4\. Después de la quinta ejecución, se actualiza el valor de "i", que ahora valdrá 5\. Como la condición es que "i" sea menor que 5, la condición ya no se cumple y las instrucciones del for no se ejecutan una sexta vez.
-
-Normalmente, la variable que controla los bucles for se llama "i", ya que recuerda a la palabra índice y su nombre tan corto ahorra mucho tiempo y espacio.
-
-El ejemplo anterior que mostraba los días de la semana contenidos en un array (clase 2) se puede rehacer de forma más sencilla utilizando la estructura for:
-
-```
-var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado",
-"Domingo"];
-for(var i=0; i<7; i++) {
-alert(dias[i]);
-}
-```
-
---------------------------------------------------------------------------------
-
-## Estructura for-in
-
-Una estructura de control derivada de for es la estructura for-in. Su definición exacta implica el uso de objetos, que es un elemento de programación avanzada que no se va a estudiar. Por tanto, solamente se va a presentar la estructura for...in adaptada a su uso en arrays. Su definición formal adaptada a los arrays es:
-
-```
-for(indice in array) {
-...
-}
-```
-
-Si se quieren recorrer todos los elementos que forman un array, la estructura for-in es la forma más eficiente de hacerlo, como se muestra en el siguiente ejemplo:
-
-```
-var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado",
-"Domingo"];
-for(i in dias) {
-alert(dias[i]);
-}
-```
-
-La variable que se indica como indice es la que se puede utilizar dentro del bucle for-in para acceder a los elementos del array. De esta forma, en la primera repetición del bucle la variable i vale 0 y en la última vale 6.
-
-Esta estructura de control es la más adecuada para recorrer arrays (y objetos), ya que evita tener que indicar la inicialización y las condiciones del bucle for simple y funciona correctamente cualquiera que sea la longitud del array. De hecho, sigue funcionando igual aunque varíe el número de elementos del array.
-
---------------------------------------------------------------------------------
-
-## Estructura Switch
-
-La estructura if-else se puede utilizar para realizar comprobaciones múltiples y tomar decisiones complejas. Sin embargo, si todas las condiciones dependen siempre de la misma variable, el código JavaScript resultante es demasiado redundante:
-
-```
-if(numero == 5) {
-...
-}
-else if(numero == 8) {
-...
-}
-else if(numero == 20) {
-...
-}
-else {
-...
-}
-```
-
-En estos casos, la estructura switch es la más eficiente, ya que está especialmente diseñada para manejar de forma sencilla múltiples condiciones sobre la misma variable. Su definición formal puede parecer compleja, aunque su uso es muy sencillo:
-
-```
-switch(variable) {
-case valor_1:
-...
-break;
-case valor_2:
-...
-break;
-...
-case valor_n:
-...
-break;
-default:
-...
-break;
-}
-```
-
-El anterior ejemplo realizado con if-else se puede rehacer mediante switch:
-
-```
-switch(numero) {
-case 5:
-...
-break;
-case 8:
-...
-break;
-case 20:
-...
-break;
-default:
-...
-break;
-}
-```
-
-La estructura switch se define mediante la palabra reservada switch seguida, entre paréntesis, del nombre de la variable que se va a utilizar en las comparaciones. Como es habitual, las instrucciones que forman parte del switch se encierran entre las llaves { y }.
-
-Dentro del switch se definen todas las comparaciones que se quieren realizar sobre el valor de la variable. Cada comparación se indica mediante la palabra reservada case seguida del valor con el que se realiza la comparación. Si el valor de la variable utilizada por switch coincide con el valor indicado por case, se ejecutan las instrucciones definidas dentro de ese case.
-
-Normalmente, después de las instrucciones de cada case se incluye la sentencia break para terminar la ejecución del switch, aunque no es obligatorio. Las comparaciones se realizan por orden, desde el primer case hasta el último, por lo que es muy importante el orden en el que se definen los case.
-
-¿Qué sucede si ningún valor de la variable del switch coincide con los valores definidos en los case? En este caso, se utiliza el valor default para indicar las instrucciones que se ejecutan en el caso en el que ningún case se cumpla para la variable indicada.
-
-Aunque default es opcional, las estructuras switch suelen incluirlo para definir al menos un valor por defecto para alguna variable o para mostrar algún mensaje por pantalla.
-
---------------------------------------------------------------------------------
-
-## While
-
-La estructura while permite crear bucles que se ejecutan ninguna o más veces, dependiendo de la condición indicada. Su definición formal es:
-
-```
-while(condicion) {
-...
-}
-```
-
-El funcionamiento del bucle while se resume en: "mientras se cumpla la condición indicada, repite indefinidamente las instrucciones incluidas dentro del bucle".
-
-Si la condición no se cumple ni siquiera la primera vez, el bucle no se ejecuta. Si la condición se cumple, se ejecutan las instrucciones una vez y se vuelve a comprobar la condición. Si se sigue cumpliendo la condición, se vuelve a ejecutar el bucle y así se continúa hasta que la condición no se cumpla.
-
-Evidentemente, las variables que controlan la condición deben modificarse dentro del propio bucle, ya que de otra forma, la condición se cumpliría siempre y el bucle while se repetiría indefinidamente.
-
-El siguiente ejemplo utiliza el bucle while para sumar todos los números menores o iguales que otro número:
-
-```
-var resultado = 0;
-var numero = 100;
-var i = 0;
-while(i <= numero) {
-resultado += i;
-i++;
-}
-alert(resultado);
-```
-
-El programa debe sumar todos los números menores o igual que otro dado. Por ejemplo si el número es 5, se debe calcular: 1 + 2 + 3 + 4 + 5 = 15
-
-Este tipo de condiciones ("suma números mientras sean menores o iguales que otro número dado") se resuelven muy fácilmente con los bucles tipo while, aunque también se podían resolver con bucles de tipo for.
-
-En el ejemplo anterior, mientras se cumpla la condición, es decir, mientras que la variable i sea menor o igual que la variable numero, se ejecutan las instrucciones del bucle.
-
-Dentro del bucle se suma el valor de la variable i al resultado total (variable resultado) y se actualiza el valor de la variable i, que es la que controla la condición del bucle. Si no se actualiza el valor de la variable i, la ejecución del bucle.
-
-# Sentencias break/continue
-
-La estructura de control for es muy sencilla de utilizar, pero tiene el inconveniente de que el número de repeticiones que se realizan sólo se pueden controlar mediante las variables definidas en la zona de actualización del bucle.
-
-Las sentencias break y continue permiten manipular el comportamiento normal de los bucles for para detener el bucle o para saltarse algunas repeticiones. Concretamente, la sentencia break permite terminar de forma abrupta un bucle y la sentencia continue permite saltarse algunas repeticiones del bucle.
-
-El siguiente ejemplo muestra el uso de la sentencia break:
-
-```
-var cadena = "En un lugar de la Mancha de cuyo nombre no quiero acordarme...";
-var letras = cadena.split("");
-var resultado = "";
-for(i in letras) {
-if(letras[i] == 'a') {
-break;
-}
-else {
-resultado += letras[i];
-}
-}
-alert(resultado);
-// muestra "En un lug"
-```
-
-Si el programa llega a una instrucción de tipo break;, sale inmediatamente del bucle y continúa ejecutando el resto de instrucciones que se encuentran fuera del bucle for.
-
-En el ejemplo anterior, se recorren todas las letras de una cadena de texto y cuando se encuentra con la primera letra "a", se detiene la ejecución del bucle for. La utilidad de break es terminar la ejecución del bucle cuando una variable toma un determinado valor o cuando se cumple alguna condición.
-
-En ocasiones, lo que se desea es saltarse alguna repetición del bucle cuando se dan algunas condiciones. Siguiendo con el ejemplo anterior, ahora se desea que el texto de salida elimine todas las letras "a" de la cadena de texto original:
-
-```
-var cadena = "En un lugar de la Mancha de cuyo nombre no quiero acordarme...";
-var letras = cadena.split("");
-var resultado = "";
-for(i in letras) {
-if(letras[i] == 'a') {
-continue;
-}
-else {
-resultado += letras[i];
-}
-}
-alert(resultado);
-// muestra "En un lugr de l Mnch de cuyo nombre no quiero cordrme..."
-```
-
-En este caso, cuando se encuentra una letra "a" no se termina el bucle, sino que no se ejecutan las instrucciones de esa repetición y se pasa directamente a la siguiente repetición del bucle for.
-
-La utilidad de continue es que permite utilizar el bucle for para filtrar los resultados en función de algunas condiciones o cuando el valor de alguna variable coincide con un valor determinado.
+Cuando se utilizan cadenas de texto, los operadores "mayor que" (>) y "menor que" (<) siguen un razonamiento no intuitivo: se compara letra a letra comenzando desde la izquierda hasta que se encuentre una diferencia entre las dos cadenas de texto. Para determinar si una letra es mayor o menor que otra, las mayúsculas se consideran menores que las minúsculas y las primeras letras del alfabeto son menores que las últimas (a es menor que b, b es menor que c, A es menor que a, etc.)

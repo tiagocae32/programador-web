@@ -1,226 +1,218 @@
-# Árbol de nodos
+# Objetos
 
-Una de las tareas habituales en la programación de aplicaciones web con JavaScript consiste en la manipulación de las páginas web. De esta forma, es habitual obtener el valor almacenado por algunos elementos (por ejemplo los elementos de un formulario), crear un elemento (párrafos, div, etc.) de forma dinámica y añadirlo a la página, aplicar una animación a un elemento (que aparezca/desaparezca, que se desplace, etc.).
+Un objeto es entidad existente en la memoria del ordenador que tiene unas propiedades (atributos o datos sobre sí mismo almacenados por el objeto) y unas operaciones disponibles específicas (métodos).
 
-Todas estas tareas habituales son muy sencillas de realizar gracias a DOM. Sin embargo, para poder utilizar las utilidades de DOM, es necesario "transformar" la página original.
+En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
 
-Una página HTML normal no es más que una sucesión de caracteres, por lo que es un formato muy difícil de manipular. Por ello, los navegadores web transforman automáticamente todas las páginas web en una estructura más eficiente de manipular.
 
-Esta transformación la realizan todos los navegadores de forma automática y nos permite utilizar las herramientas de DOM de forma muy sencilla. El motivo por el que se muestra el funcionamiento de esta transformación interna es que condiciona el comportamiento de DOM y por tanto, la forma en la que se manipulan las páginas. DOM transforma todos los documentos XHTML en un conjunto de elementos llamados nodos, que están interconectados y que representan los contenidos de las páginas web y las relaciones entre ellos. Por su aspecto, la unión de todos los nodos se llama "árbol de nodos".
+1. Usando una
+```
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = getAppleInfo;
+}
 
-La siguiente página XHTML sencilla:
+var apple = new Apple('macintosh');
+apple.color = "reddish";
+alert(apple.getInfo());
 
 ```
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Página sencilla</title>
-</head>
-<body>
-<p>Esta página es <strong>muy sencilla</strong></p>
-</body>
-</html>
+
+1.1. Mediante una funcion interna
 ```
-
-Se transforma en el siguiente árbol de nodos:
-
-![](http://i.imgur.com/fhe4W27.jpg)
-
-En el esquema anterior, cada rectángulo representa un nodo DOM y las flechas indican las relaciones entre nodos. Dentro de cada nodo, se ha incluido su tipo.
-
-La raíz del árbol de nodos de cualquier página XHTML siempre es la misma: un nodo de tipo especial denominado "Documento".
-
-A partir de ese nodo raíz, cada etiqueta XHTML se transforma en un nodo de tipo "Elemento". La conversión de etiquetas en nodos se realiza de forma jerárquica. De esta forma, del nodo raíz solamente pueden derivar los nodos HEAD y BODY. A partir de esta derivación inicial, cada etiqueta XHTML se transforma en un nodo que deriva del nodo correspondiente a su "etiqueta padre".
-
-La transformación de las etiquetas XHTML habituales genera dos nodos: el primero es el nodo de tipo "Elemento" (correspondiente a la propia etiqueta XHTML) y el segundo es un nodo de tipo "Texto" que contiene el texto encerrado por esa etiqueta XHTML.
-
-Así, la siguiente etiqueta XHTML:
-
-```
-<title>Página sencilla</title>
-```
-
-Genera los siguientes dos nodos:
-
-![](http://i.imgur.com/KAmynLp.jpg)
-
-De la misma forma, la siguiente etiqueta XHTML:
-
-```
-<p>Esta página es <strong>muy sencilla</strong></p>
-```
-
-Genera los siguientes nodos:
-
-```
-* Nodo de tipo "Elemento" correspondiente a la etiqueta <p>.
-* Nodo de tipo "Texto" con el contenido textual de la etiqueta <p>.
-* Como el contenido de <p> incluye en su interior otra etiqueta XHTML, la etiqueta
-* interior se transforma en un nodo de tipo "Elemento" que representa la etiqueta
-* **strong** y que deriva del nodo anterior.
-* El contenido de la etiqueta <strong> genera a su vez otro nodo de tipo "Texto" que
-* deriva del nodo generado por <strong>.
-```
-
-![](http://i.imgur.com/2QHV9p7.jpg)
-
-La transformación automática de la página en un árbol de nodos siempre sigue las mismas reglas:
-
-- Las etiquetas XHTML se transforman en dos nodos: el primero es la propia etiqueta y el segundo nodo es hijo del primero y consiste en el contenido textual de la etiqueta.
-- Si una etiqueta XHTML se encuentra dentro de otra, se sigue el mismo procedimiento anterior, pero los nodos generados serán nodos hijo de su etiqueta padre.
-
-Como se puede suponer, las páginas XHTML habituales producen árboles con miles de nodos. Aun así, el proceso de transformación es rápido y automático, siendo las funciones proporcionadas por DOM (que se verán más adelante) las únicas que permiten acceder a cualquier nodo de la página de forma sencilla e inmediata.
-
-En resumen, algunos de los objetos dentro de un árbol de nodos son:
-
-- Elementos: son los nodos definidos por etiquetas html. Por ejemplo una etiqueta div genera un nodo. Si dentro de ese div tenemos tres etiquetas p, dichas etiquetas definen nodos hijos de la etiqueta div.
-- Texto: el texto dentro de un nodo element se considera un nuevo nodo hijo de tipo text (texto). Los navegadores también crean nodos tipo texto sin contenido para representar elementos como saltos de línea o espacios vacíos.
-- Atributo: los atributos de las etiquetas definen nodos, aunque trabajando con JavaScript no los veremos como nodos, sino que lo consideramos información asociada al nodo de tipo element.
-
-# Acceso a los nodos
-
-Una vez construido automáticamente el árbol completo de nodos DOM, ya es posible utilizar las funciones DOM para acceder de forma directa a cualquier nodo del árbol.
-
-Como acceder a un nodo del árbol es equivalente a acceder a "un trozo" de la página, una vez construido el árbol, ya es posible manipular de forma sencilla la página: acceder al valor de un elemento, establecer el valor de un elemento, mover un elemento de la página, crear y añadir nuevos elementos, etc
-
-DOM proporciona dos métodos alternativos para acceder a un nodo específico: acceso a través de sus nodos padre y acceso directo.
-
-Las funciones que proporciona DOM para acceder a un nodo a través de sus nodos padre consisten en acceder al nodo raíz de la página y después a sus nodos hijos y a los nodos hijos de esos hijos y así sucesivamente hasta el último nodo de la rama terminada por el nodo buscado. Sin embargo, cuando se quiere acceder a un nodo específico, es mucho más rápido acceder directamente a ese nodo y no llegar hasta él descendiendo a través de todos sus nodos padre.
-
-Por ese motivo, no se van a presentar las funciones necesarias para el acceso jerárquico de nodos y se muestran solamente las que permiten acceder de forma directa a los nodos.
-
-Por último, es importante recordar que el acceso a los nodos, su modificación y su eliminación solamente es posible cuando el árbol DOM ha sido construido completamente, es decir, después de que la página XHTML se cargue por completo.
-
-Más adelante se verá cómo asegurar que un código JavaScript solamente se ejecute cuando el navegador ha cargado entera la página XHTML.
-
---------------------------------------------------------------------------------
-
-## TagName-getElementsByTagName()
-
-Como sucede con todas las funciones que proporciona DOM, la función **getElementsByTagName()** tiene un nombre muy largo, pero que lo hace autoexplicativo.
-
-La función **getElementsByTagName(nombreEtiqueta)** obtiene todos los elementos de la página XHTML cuya etiqueta sea igual que el parámetro que se le pasa a la función.
-
-El siguiente ejemplo muestra cómo obtener todos los párrafos de una página XHTML:
-
-```
-var parrafos = document.getElementsByTagName("p");
-```
-
-El valor que se indica delante del nombre de la función (en este caso, document) es el nodo a partir del cual se realiza la búsqueda de los elementos. En este caso, como se quieren obtener todos los párrafos de la página, se utiliza el valor document como punto de partida de la búsqueda.
-
-El valor que devuelve la función es un array con todos los nodos que cumplen la condición de que su etiqueta coincide con el parámetro proporcionado. El valor devuelto es un array de nodos DOM, no un array de cadenas de texto o un array de objetos normales. Por lo tanto, se debe procesar cada valor del array.
-
-De este modo, se puede obtener el primer párrafo de la página de la siguiente manera:
-
-```
-var primerParrafo = parrafos[0];
-```
-
-De la misma forma, se podrían recorrer todos los párrafos de la página con el siguiente código:
-
-```
-for(var i=0; i<parrafos.length; i++) {
-var parrafo = parrafos[i];
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = function() {
+        return this.color + ' ' + this.type + ' apple';
+    };
 }
 ```
 
-La función getElementsByTagName() se puede aplicar de forma recursiva sobre cada uno de los nodos devueltos por la función. En el siguiente ejemplo, se obtienen todos los enlaces del primer párrafo de la página:
+1.2. Mediante prototype
+```
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+}
+ 
+Apple.prototype.getInfo = function() {
+    return this.color + ' ' + this.type + ' apple';
+};
+```
+
+2. Usando objetos literales
+```
+var apple = {
+    type: "macintosh",
+    color: "red",
+    getInfo: function () {
+        return this.color + ' ' + this.type + ' apple';
+    }
+}
+apple.color = "reddish";
+alert(apple.getInfo());
+```
+
+3. Usando un singleton mediante una funcion
+```
+var apple = new function() {
+    this.type = "macintosh";
+    this.color = "red";
+    this.getInfo = function () {
+        return this.color + ' ' + this.type + ' apple';
+    };
+}
+
+apple.color = "reddish";
+alert(apple.getInfo());
+```
+
+
+# Propiedades
+
+Las propiedadesson las características intrínsecas del objeto. Éstas, se representan a modo de variables, solo que técnicamente, pasan a denominarse propiedades:
+
+Las propiedades se definen de la misma forma que las variables (aplican las mismas reglas de estilo).
+
+# Herencia
+
+Algunos objetos comparten las mismas propiedades y métodos que otro objeto, y además agregan nuevas propiedades y métodos. A esto se lo denomina herencia: una clase que hereda de otra. Vale aclarar, que en Python, cuando una clase no hereda de ninguna otra, debe hacerse heredar de object, que es la clase principal de Python, que define un objeto.
 
 ```
-var parrafos = document.getElementsByTagName("p");
-var primerParrafo = parrafos[0];
-var enlaces = primerParrafo.getElementsByTagName("a");
+function Felino () {}
+ 
+Felino.prototype = new Animal();
+Felino.prototype.constructor = Felino;
+ 
+Felino.prototype.maullar = function () {
+  console.log('meowwwww');
+};
+ 
+var iris = new Felino();
+iris.crecer();
+iris.maullar();
 ```
 
 --------------------------------------------------------------------------------
 
-## Name-getElementsByName()
+# Patrón Módulo en JavaScript (Module Pattern)
 
-La función **getElementsByName()** es similar a la anterior, pero en este caso se buscan los elementos cuyo atributo **name** sea igual al parámetro proporcionado. En el siguiente ejemplo, se obtiene directamente el único párrafo con el nombre indicado:
+Los módulos son muy importantes ya que nos permiten mantener nuestro código encapsulado, sin contaminar el scope global y evitar colisión de nombres. Además nos ayudan a mantener en el proyecto unidades de código separadas y organizadas.
+
+El Module Pattern es considerado un Patrón de Diseño y en JavaScript nos ofrece la posibilidad de simular propiedades y métodos privados. Las variables y funciones en JavaScript no tienen modificadores de acceso, pero a través de los closures podemos simular este comportamiento.
+
+El Module Pattern se implementa creando una función anónima que se auto-invoca y regresa un objeto literal.
 
 ```
-var parrafoEspecial = document.getElementsByName("especial");
-<p name="prueba">...</p>
-<p name="especial">...</p>
-<p>...</p>
+var myModule = (function () {
+  var counter = 0;
+
+  return {
+    incrementCounter: function () {
+      return counter++;
+    },
+
+    resetCounter: function () {
+      console.log('Valor de counter antes de reset: ' + counter);
+      counter = 0;
+    }
+  }
+})();
+
+// Uso:
+myModule.incrementCounter();
+myModule.incrementCounter();
+myModule.resetCounter(); // Imprime 2
 ```
 
-Normalmente el atributo name es único para los elementos HTML que lo definen, por lo que es un método muy práctico para acceder directamente al nodo deseado. En el caso de los elementos HTML radiobutton, el atributo name es común a todos los radiobutton que están relacionados, por lo que la función devuelve una colección de elementos.
+De esta forma al tener una función anónima creamos un scope dentro de la función, evitando así contaminar el ámbito global. Regresamos un objeto literal que contiene dos métodos, ambos métodos pueden acceder a la variable counter ya que se ha creado un closure. Así podemos simular propiedades privadas.
 
-Internet Explorer 6.0 no implementa de forma correcta esta función, ya que sólo la tiene en cuenta para los elementos de tipo **input** y **img**. Además, también tiene en consideración los elementos cuyo atributo id sea igual al parámetro de la función.
+Entonces básicamente el Module Pattern se define de la siguiente forma.
+
+```
+var myModule = (function () {
+  var privateProperty = 10;
+
+  var privateMethodOne = function () {
+    // Algo
+  };
+
+  var privateMethodTwo = function () {
+    // Algo
+  };
+
+  return {
+    publicProperty: "foo",
+    publicMethodOne: function () {
+      //...
+    },
+    publicMethodTwo: function () {
+      // Invocar método privado
+      privateMethodOne();
+    },
+    publicMethodThree: privateMethodTwo //Alias de privateMethodTwo
+  }
+})();
+```
+
+## Tipos de Herencia:
+
+Existen dos tipos de herencia
+
+- **Herencia Simple:** En esta jerarquía cada clase tiene como máximo una sola superclase. La herencia simple permite que una clase herede las propiedades y métodos de su superclase en una cadena jerárquica.
+
+- **Herencia múltiple:** Una malla o retícula consta de clases, cada una de las cuales pueden tener dos o más superclases inmediatas. Una herencia múltiple es aquella en la que cada clase puede heredar las propiedades y métodos de cualquier número de clases.
+
+# Polimorfismo
+
+La palabra polimorfismo significa que un objeto posee varias formas diferentes. Este es uno de los conceptos esenciales de una programación orientada a objetos. Así como la herencia está relacionada con las clases y su jerarquía, el polimorfismo se relaciona con los métodos.
+
+En general, hay tres tipos de polimorfismo:
+
+- Polimorfismo de sobrecarga
+- Polimorfismo paramétrico (también llamado polimorfismo de plantillas)
+- Polimorfismo de inclusión (también llamado redefinición o subtipado)
 
 --------------------------------------------------------------------------------
 
-## ID-getElementById()
+## Polimorfismo de sobrecarga
 
-La función **getElementById()** es la más utilizada cuando se desarrollan aplicaciones web dinámicas. Se trata de la función preferida para acceder directamente a un nodo y poder leer o modificar sus propiedades.
+El polimorfismo de sobrecarga ocurre cuando las funciones del mismo nombre existen, con funcionalidad similar, en clases que son completamente independientes una de otra (éstas no tienen que ser clases secundarias de la clase objeto). Por ejemplo, la clase complex, la clase image y la clase link pueden todas tener la función "display". Esto significa que no necesitamos preocuparnos sobre el tipo de objeto con el que estamos trabajando si todo lo que deseamos es verlo en la pantalla.
 
-La función **getElementById()** devuelve el elemento XHTML cuyo atributo id coincide con el parámetro indicado en la función. Como el atributo id debe ser único para cada elemento de una misma página, la función devuelve únicamente el nodo deseado.
-
-```
-var cabecera = document.getElementById("cabecera");
-
-<div id="cabecera">
-<a href="/" id="logo">...</a>
-</div>
-```
-
-La función **getElementById()** es tan importante y tan utilizada en todas las aplicaciones web, que casi todos los ejemplos y ejercicios que siguen la utilizan constantemente.
-
-Internet Explorer 6.0 también interpreta incorrectamente esta función, ya que devuelve también aquellos elementos cuyo atributo name coincida con el parámetro proporcionado a la función.
-
-# Creación y eliminación de nodos
-
-Acceder a los nodos y a sus propiedades es sólo una parte de las manipulaciones habituales en las páginas. Las otras operaciones habituales son las de crear y eliminar nodos del árbol DOM, es decir, crear y eliminar "trozos" de la página web.
+Por lo tanto, el polimorfismo de sobrecarga nos permite definir operadores cuyos comportamientos varían de acuerdo a los parámetros que se les aplican. Así es posible, por ejemplo, agregar el operador + y hacer que se comporte de manera distinta cuando está haciendo referencia a una operación entre dos números enteros (suma) o bien cuando se encuentra entre dos cadenas de caracteres (concatenación).
 
 --------------------------------------------------------------------------------
 
-## Creación de elementos XHTML simples
+## Polimorfismo paramétrico
 
-Crear y añadir a la página un nuevo elemento XHTML sencillo consta decuatro pasos diferentes:
+El polimorfismo paramétrico es la capacidad para definir varias funciones utilizando el mismo nombre, pero usando parámetros diferentes (nombre y/o tipo). El polimorfismo paramétrico selecciona automáticamente el método correcto a aplicar en función del tipo de datos pasados en el parámetro.
 
-1. Creación de un nodo de tipo Element que represente al elemento.
-2. Creación de un nodo de tipo Text que represente el contenido del elemento.
-3. Añadir el nodo Text como nodo hijo del nodo Element.
-4. Añadir el nodo Element a la página, en forma de nodo hijo del nodo correspondiente al lugar en el que se quiere insertar el elemento.
+Por lo tanto, podemos por ejemplo, definir varios métodos homónimos de addition() efectuando una suma de valores.
 
-De este modo, si se quiere añadir un párrafo simple al final de una página XHTML, es necesario incluir el siguiente código JavaScript:
+- El método int addition(int,int) devolvería la suma de dos números enteros.
+- float addition(float, float) devolvería la suma de dos flotantes.
+- char addition(char, char) daría por resultado la suma de dos caracteres definidos por el autor.
 
-```
-// Crear nodo de tipo Element
-var parrafo = document.createElement("p");
-
-// Crear nodo de tipo Text
-var contenido = document.createTextNode("Hola Mundo!");
-
-// Añadir el nodo Text como hijo del nodo Element
-parrafo.appendChild(contenido);
-
-// Añadir el nodo Element como hijo de la pagina
-document.body.appendChild(parrafo);
-```
-
-El proceso de creación de nuevos nodos puede llegar a ser tedioso, ya que implica la utilización de tres funciones DOM:
-
-- **createElement(etiqueta)**: crea un nodo de tipo Element que representa al elemento XHTML cuya etiqueta se pasa como parámetro.
-- **createTextNode(contenido)**: crea un nodo de tipo Text que almacena el contenido textual de los elementos XHTML.
-- **nodoPadre.appendChild(nodoHijo)**: añade un nodo como hijo de otro nodo. Se debe utilizar al menos dos veces con los nodos habituales: en primer lugar se añade el nodo Text como hijo del nodo Element y a continuación se añade el nodo Element como hijo de algún nodo de la página.
+Una signature es el nombre y tipo (estático) que se da a los argumentos de una función. Por esto, una firma de método determina qué elemento se va a llamar.
 
 --------------------------------------------------------------------------------
 
-## Eliminación de nodos
+## Polimorfismo de inclusión
 
-Afortunadamente, eliminar un nodo del árbol DOM de la página es mucho más sencillo que añadirlo. En este caso, solamente es necesario utilizar la función **removeChild()**:
+La habilidad para redefinir un método en clases que se hereda de una clase base se llama especialización. Por lo tanto, se puede llamar un método de objeto sin tener que conocer su tipo intrínseco: esto es polimorfismo de subtipado. Permite no tomar en cuenta detalles de las clases especializadas de una familia de objetos, enmascarándolos con una interfaz común (siendo esta la clase básica).
 
-```
-var parrafo = document.getElementById("provisional");
-parrafo.parentNode.removeChild(parrafo);
-<p id="provisional">...</p>
-```
+Imagine un juego de ajedrez con los objetos rey, reina, alfil, caballo, torre y peón, cada uno heredando el objeto pieza.
 
-La función **removeChild()** requiere como parámetro el nodo que se va a eliminar. Además, esta función debe ser invocada desde el elemento padre de ese nodo que se quiere eliminar. La forma más segura y rápida de acceder al nodo padre de un elementoes mediante la propiedad **nodoHijo.parentNode.
+El método movimiento podría, usando polimorfismo de subtipado, hacer el movimiento correspondiente de acuerdo a la clase objeto que se llama. Esto permite al programa realizar el movimiento.de_pieza sin tener que verse conectado con cada tipo de pieza en particular.
 
-Así, para eliminar un nodo de una página XHTML se invoca a la función **removeChild()** desde el valor parentNode del nodo que se quiere eliminar. Cuando se elimina un nodo, también se eliminan automáticamente todos los nodos hijos que tenga, por lo que no es necesario borrar manualmente cada nodo hijo.
+# Prototyping
+
+El patrón de diseño Prototype (Prototipo), tiene como finalidad crear nuevos objetos duplicándolos, clonando una instancia creada previamente.
+
+Este patrón especifica la clase de objetos a crear mediante la clonación de un prototipo que es una instancia ya creada. La clase de los objetos que servirán de prototipo deberá incluir en su interfaz la manera de solicitar una copia, que será desarrollada luego por las clases concretas de prototipos.
+
+La programación basada en prototipos es un estilo de programación orientada a objetos en la que las clases no están presentes y la reutilización de comportamiento (conocido como herencia en lenguajes basados en clases) se lleva a cabo a través de un proceso de decoración de objetos existentes que sirven de prototipos. Este modelo también se conoce como programación sin clases, orientada a prototipos o basada en ejemplos.
+
+El ejemplo original (y más canónico) de un lenguaje basado en prototipos es el lenguaje de programación autodesarrollado por David Ungar y Randall Smith. Sin embargo, el estilo de programación sin clases se ha hecho cada vez más popular y ha sido adoptado para lenguajes de programación como JavaScript, Cecil, NewtonScript, Io, MOO, REBOL, Kevo, Squeak (cuando se utiliza el Viewer framework para manipular los componentes Morphic) y varios otros
