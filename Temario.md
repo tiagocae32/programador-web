@@ -1,16 +1,13 @@
 # Programador Web - Nivel 2
 
-## Introduccion a la Programacion (algoritmos iniciales)
-**Contar un poco que es un algoritmo, lo que vamos a comenzar a usar desde esta primer clase
-es un punto muy importante para entender la programacion que vamos a realizar, asi al momento de comenzar a programar no es tan extraño lo que vean y puedan relacionarlo con situaciones ya vividas como en matematicas u otras situaciones de su vida.
-Esto nos va a permitir a los profesores usar un lenguaje unificado para explicar la logica de funcionalidades de lo que vamos a ver durante el curso**
+## Introduccion a la Programación 
 
 * ¿Qué es un algoritmo?
-* ¿Qué es un programa o aplicacion?
-* Caracteristicas de un algoritmo.
+* ¿Qué es un programa o aplicación?
+* Características de un algoritmo.
 * Partes de un algoritmo.
-* ¿Como represetamos un algoritmo?
-* Ejemplos diarios de algoritmos para hacer mas natural la programacion.
+* ¿Cómo represetamos un algoritmo?
+* Ejemplos diarios de algoritmos para hacer más natural la programación.
 
 
 ## Sintaxis y Variables
@@ -54,7 +51,7 @@ Esto nos va a permitir a los profesores usar un lenguaje unificado para explicar
 * Metodos Array
 * Trabajo Práctico :white_check_mark:
 
-## Patrones (Este tema tendria que darse con ejemplos durante el curso o al armar los tps, no una clase dedicada a este tema)
+## Patrones
 
 * Patrones, qué son, para que sirven
 * Singleton
