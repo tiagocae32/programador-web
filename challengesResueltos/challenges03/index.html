@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>Challenge 3</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="light-green lighten-5 ">
+        <div class="nav-wrapper">
+            <!--  <a href="#" class="brand-logo">CoderHouse</a>-->
+            <a href="">
+                <h2 class="usuario">Bienvenido <span id="nuevoNombreJQ"></span></h2>
+            </a>
+            <a href="#" class="right" id="numeroChallenge"> Challenge 03</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row areaResultados">
+            <div class="col s10 offset-s1">
+                <div class="col s2 diaSemana" id="lunes">Lunes</div>
+                <div class="col s2 diaSemana" id="martes">Martes</div>
+                <div class="col s2 diaSemana" id="miercoles">Miercoles</div>
+                <div class="col s2 diaSemana" id="jueves">Jueves</div>
+                <div class="col s2 diaSemana" id="viernes">Viernes</div>
+                <div class="col s2 diaSemana" id="finde">Sabado/Domingo</div>
+            </div>
+
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col s4">
+                <h2 class="center">Primer Operador <span class="limite"></span>: <span class="avisoCantidad"><p id="primerNumero" class="elementos"></p></span></h2>
+            </div>
+            <div class="col s4">
+                <h2 class="center">Segundo Operador <span class="limite"></span>:<span class="avisoCantidad"> <p id="segundoNumero" class="elementos"></p></span></h2>
+            </div>
+            <div class="col s4">
+                <h2 class="center">Resultado <span class="limite"></span>: <span class="avisoCantidad"><p id="sumar" class="elementos"></p> <span id="tipoNumero"></span></span>
+                </h2>
+            </div>
+        </div>
+        <!--script-->
+        <script type="text/javascript" src="js/estaticos/jquery-2.1.4.min.js"></script>
+        <script src="js/estaticos/materialize.min.js"></script>
+        <script type="text/javascript" src="js/resuelto.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,8 +1,9 @@
 # Pequeñas funciones
 
-* Crear una funcion que pida nombre y apellido mediante prompt y lo muestre en la consola.
-* Crear una funcion que en base a un paramentro solicitado mediante prompt muestre si el dia es habil o de fines de semana en consola.
-* Crear una funcion que retorne la suma de 2 numeros solicitados como parametros, este valor pasarlo a otra funcion que diga si es par o impar el numero.
+* Crear una funcion que pida nombre y apellido mediante prompt (guardar el contenido en una variable llamada *nuevoNombre*) y que se ejecute automaticamente.
+* Crear una funcion que en base a un paramentro solicitado mediante prompt muestre si el dia es habil o de fines de semana en consola, guardar el resultado 
+    en una variable global llamada *resultado*.
+* Declarar una variable llamada *sumar* y asignarle  una funcion que retorne la suma de 2 numeros solicitados como parametros mediante Prompt, este valor pasarlo a otra funcion que diga si es par o impar el numero asignar en el retorno *true* si es par y *false* si es impar de si es par o impar en una variable llamada *valorDeParOImpar*.
 
 # Funcionas un poco mas avanzadas.
 

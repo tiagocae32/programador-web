@@ -1,0 +1,32 @@
+    nav a {
+        color: #424242 !important;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    .usuario {
+        -webkit-margin-before: 0 !important;
+        display: inline-block;
+    }
+    
+    #numeroChallenge {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    .areaResultados {
+        margin-top: 80px;
+    }
+    
+    .areaResultados div {
+        font-weight: bold;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

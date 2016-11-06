@@ -1,8 +1,11 @@
 # Objetos
 
-Un objeto es entidad existente en la memoria del ordenador que tiene unas propiedades (atributos o datos sobre sí mismo almacenados por el objeto) y unas operaciones disponibles específicas (métodos).
+Un objeto es entidad existente en la memoria del ordenador que tiene unas propiedades 
+(atributos o datos sobre sí mismo almacenados por el objeto) y unas operaciones disponibles específicas (métodos).
 
-En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase . Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear una instancia de la clase, en la forma de un objeto
+En el mundo de la programación orientada a objetos (POO), un objeto es el resultado de la instanciación de una clase. 
+Una clase es el anteproyecto que ofrece la funcionalidad en ella definida, pero ésta queda implementada sólo al crear 
+una instancia de la clase, en la forma de un objeto
 
 
 1. Usando una
