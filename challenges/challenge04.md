@@ -20,4 +20,5 @@
     * Año
     * Estado() (indicar nuevo o usado segun el parametro si tuvo dueños o no).
 
+* crear un array con el nombre *arrayAutos* y guardar cada objeto creado.
 * Recorrer las caracteristicas de los autos y mostrarlas mediante un console.log()

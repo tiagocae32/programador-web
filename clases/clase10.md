@@ -9,7 +9,6 @@ Realizar un ToDo List, debera tener las siguientes funcionalidades:
 - Cambiar a estado completado y descompletado(?) una tarea
 - Eliminar una tarea
 - Eliminar todas las tareas
-- Ordernar por A-Z y Z-A las tareas
 
 ## Objetivo:
 

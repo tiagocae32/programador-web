@@ -1,15 +1,15 @@
 //Definimos nuestro string
-var stringOriginal = "Usamos MetOdos de string en JAVASCRIPT";
-
+//var stringOriginal = "Usamos MetOdos de string en JAVASCRIPT";
+var stringOriginal = prompt("ingresa un texto", "pepe");
 // Creamos nuestra funcion pasandole como parametro el string antes definido
 
 function contadorVocales(palabra) {
     // Declaramos nuestro contador en 0
     var cantidadVocales = 0;
     var contadorEspacios = 0;
-    if (palabra.length <= 5) {
+    if (palabra.length < 5) {
         alert("el string tiene que ser mayor a 5 letras");
-        return;
+        return "el string tiene que ser mayor a 5 letras";
     }
 
     // Pasamos el string a minusculas para no tener que validad letras mayusculas o minusculas
@@ -33,4 +33,6 @@ function contadorVocales(palabra) {
     console.log("cantidad de letras de la palabra = " + (palabra.length - contadorEspacios));
     // retornamos la cantidad de vocales
     return cantidadVocales;
-}(stringOriginal)
+}
+
+var vocales = contadorVocales(stringOriginal);

@@ -1,0 +1,1 @@
+var contenedorResultado = document.getElementById("contenedorResultado");

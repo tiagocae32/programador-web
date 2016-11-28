@@ -8,11 +8,11 @@ Crear una función que cuente la cantidad de vocales existentes en un string (re
 - En el caso de que sea vocal tenemos que hacer que se incremente una variable.
 - Si no es una vocal (no hacemos nada)
 - Retornamos la cantidad de vocales existentes en nuestra variable.
-
+- Guardamos el resultado de la funcion en *vocales*
 **Validaciones obligatorias:**
     * Cantidad de letras mayor a 5.
     * Evitar mayusculas.
-    * Indicar la poscion de la primer letra "a" del string si existe.
+    * Indicar donde esta la primer letra "a" del string si existe.
 
 
 Puntos extra si:

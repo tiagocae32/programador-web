@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport"/>
+    <title>Listado de tareas</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <nav class="light-blue ">
+      <div class="nav-wrapper container">
+        <a class="brand-logo" href="#" id="logo-container">Mi lista</a>
+        <ul class="right">
+          <li>
+            <a href="#" id="btnMostrarSeccionTareas">Agregar Tarea</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Agragar clase hide -->
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Bienvenido a lista de tareas</h1>
+      </div>
+    </div>
+    <!--Agragar clase hide -->
+    <div class="section no-pad-bot hide" id="seccionTarea">
+      <div class="container">
+        <div class="row center">
+          <input id="nuevaTareaFecha" name="nuevaTareaFecha" placeholder="Ingresa una tarea" type="date">
+          <input id="nuevaTareaTexto" name="nuevaTareaTexto" placeholder="Ingresa una tarea" type="text">
+          <span id="alertas"></span>
+        </div>
+        <div class="row center">
+          <input class="btn-large waves-effect waves-light orange" id="agregarTarea" name="name" type="button" value="Agregar Tarea">
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 m4"></div>
+          <table>
+            <thead>
+              <th>
+                Fecha
+              </th>
+              <th>
+                Tarea
+              </th>
+              <th>
+                Estado
+              </th>
+              <th>
+                Acciones
+              </th>
+            </thead>
+            <tbody id="listadoTareas"></tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!--  Scripts-->
+      <script src="js/materialize.js"></script>
+      <script src="js/funcionalidadGenerica.js"></script>
+      <script src="js/nuevaTarea.js"></script>
+      <script src="js/accionesTareas.js"></script>
+      <script src="js/init.js"></script>
+
+    </body>
+  </html>

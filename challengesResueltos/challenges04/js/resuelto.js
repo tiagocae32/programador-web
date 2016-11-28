@@ -28,10 +28,8 @@ auto3 = new constructorAuto("Acura", 1, 3, "azul", false, false, false, 300, 1);
 auto4 = new constructorAuto("Lexus", 4, 2, "rojo", true, false, true, 200, .10);
 
 
-// recorremos los autos desde una funcion
-function verAutos(auto) {
-    for (elementos in auto) {
+var arrayAutos = [auto1, auto2, auto3, auto4];
+for (i in auto1) {
 
-        console.log(auto[elementos]);
-    }
+    console.log("el valor de " + i + " es " + auto1[i]);
 }
