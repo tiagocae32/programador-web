@@ -1,5 +1,4 @@
-
-Este curso te permitira:
+## Este curso te permitira:
 
 * Programar sitios web dinamicos y aplicaciones web modernas.
 * Conocer exaustivamente las principales y más demandadas tecnologías del Desarrollo Web.
