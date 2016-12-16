@@ -2,7 +2,7 @@
 
 * [Acerca del Curso](README.md)
 * [Déspues del curso](despues-del-curso.md)
-* [Destinatarios](Destinatarios.md)
-* [Requisitos](Pre-requisitos.md)
+* [Destinatarios](destinatarios.md)
+* [Requisitos](requisitos.md)
 * [Temario](Temario.md)
 
