@@ -75,6 +75,14 @@
 
 ## :star: Workshop 1 :star:
 * Durante el primer Workshop haremos una ToDo List
+### jQuery
+* Introduccion a jQuery
+* Manipulation, addClass, removeClass, after, append, appendTo, attr, before, css, html, innerHeight, etc
+* Trabajo Práctico :white_check_mark:
+### jQuery Selectores
+* Selectores
+* Todo tipo de selectores, has, :, :input, prev, sibilings, not, odd, password, visible, etc
+* Trabajo Práctico :white_check_mark:
 
 ## :star: Workshop 2 :star:
 * Durante el primer Workshop haremos una ToDo List
