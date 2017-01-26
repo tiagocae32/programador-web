@@ -73,14 +73,17 @@
 * Manejadores de eventos semánticos
 * Trabajo Práctico :white_check_mark:
 
------------
-
-## :star: Workshop :star:
+## :star: Workshop 1 :star:
 * Durante el primer Workshop haremos una ToDo List
 
-------------
+## :star: Workshop 2 :star:
+* Durante el primer Workshop haremos una ToDo List
 
+## :star: Workshop 3 :star:
+* Durante el primer Workshop haremos una ToDo List
 
+## :star: Workshop 4 :star:
+* Durante el primer Workshop haremos una ToDo List
 
 ## jQuery Efectos
 
