@@ -17,6 +17,5 @@ Con el curso de Programador Web podrás realizar páginas y aplicaciones web int
  * Martes y Jueves 
  * Sábados
 * Horarios disponibles:
- * Mañana: 9:30 - 13:00
  * Noche: 18:30 - 22:00
  * Turno sábados: 9:30 - 16:30
