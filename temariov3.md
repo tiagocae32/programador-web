@@ -3,21 +3,16 @@
 ## Introduccion a la Programación 
 
 * ¿Qué es un algoritmo?
-  * Definición
 * Características de un algoritmo.
 * Partes de un algoritmo.
 * ¿Cómo representamos un algoritmo?
 * ¿Qué es una aplicacion web?
-  * Definición de cliente y servidor
 
 ## Sintaxis y Variables
 
 * ¿Qué es Javascript?
   * Definición del intérprete
 * Inclusión de Javascript en nuestro archivo
-  * Por tag/elemento HTML
-  * Por archivo separado
-  * In-line
 * Sintaxis
 * Palabras reservadas
 * Variables
@@ -63,15 +58,14 @@
 
 ## DOM con jQuery
 
-* Manipulation, addClass, removeClass, after, append, appendTo, attr, before, css, html, innerHeight, etc
+* Selectores
+* Manipulacion de DOM
 * Trabajo Práctico :white_check_mark:
 
 ## Eventos con jQuery
 
 * Eventos
-* blur, click, bind, focus, hover, key, on, off, etc
 * Trabajo Práctico :white_check_mark:
-
 
 ## Depuración
 
@@ -85,36 +79,37 @@
 ## :star: Workshop 1 :star:
 
 * Durante el primer Workshop haremos una ToDo List
-* Trabajo Práctico :white_check_mark:
-### jQuery Selectores
-* Selectores
-* Todo tipo de selectores, has, :, :input, prev, sibilings, not, odd, password, visible, etc
-* Trabajo Práctico :white_check_mark:
 
 ## :star: Workshop 2 :star:
+
 * Durante el primer Workshop haremos una ToDo List
 
 ## :star: Workshop 3 :star:
+
 * Durante el primer Workshop haremos una ToDo List
 
 ## jQuery AJAX
 
-* API
+* ¿ Qué es una API?
 * AJAX
-* $.ajax (XMLHttpRequest)
 * JSON
 * GET/POST
-* Network Panel (Chrome)
+* Definición de cliente y servidor
+* DevTools para networking
 * Trabajo Práctico :white_check_mark:
 
 ## :star: Workshop 2 :star:
-* Trabajo Práctico final estilo Spotify
+
+* Trabajo Práctico final como Spotify
 
 ## :star: Workshop 2 :star:
-* Trabajo Práctico final estilo Spotify
+
+* Trabajo Práctico final como Spotify
 
 ## :star: Workshop 3 :star:
-* Trabajo Práctico final estilo Spotify
+
+* Trabajo Práctico final como Spotify
 
 ## :star: Workshop 4 :star:
-* Trabajo Práctico final estilo Spotify
+
+* Trabajo Práctico final como Spotify
